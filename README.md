@@ -48,19 +48,33 @@ info:
 project directory structure:
 
 ├── src
+
 │   ├── App.css
+
 │   ├── App.jsx
+
 │   ├── assets/
+
 │   │   └── react.svg
+
 │   ├── components/
+
 │   ├── helpers/
+
 │   ├── index.css
+
 │   ├── main.jsx
+
 │   ├── pages/
+
 │   │   └── Navbar
+
 │   │   └── index.jsx
+
 │   ├── routes.jsx
+
 │   ├── styles/
+
 │   └── utils/
 
 Project settings: - Node Version: v20.14.0
