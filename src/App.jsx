@@ -6,7 +6,8 @@ function App() {
     <>
       <Navbar />
       <h1>App page</h1>
-    </>
+      <button onClick={() => console.log("hello world")}>hello</button>
+    </> 
   );
 }
 
