@@ -1,31 +1,23 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { darkColors, lightColors } from "../../styles/colors";
+import { useSelector, useDispatch } from "react-redux";
+import { setThemeMode } from "../../redux/slices/theme";
 
 const useThemeMode = () => {
-  const [themeMode, setThemeMode] = useState(() => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme ? JSON.parse(storedTheme) : false;
-  });
+  const themeMode = useSelector((state) => state.theme.value);
+  const dispatch = useDispatch();
 
-  // const loadTheme = () => {
-  //   useEffect(() => {
-  //     const data = localStorage.getItem("theme");
-  //     if (data !== null) {
-  //       setThemeMode(JSON.parse(data));
-  //     }
-  //   }, []);
-  //
-  // };
+  const setTheme = (data) => dispatch(setThemeMode(data));
   useEffect(() => {
     localStorage.setItem("theme", JSON.stringify(themeMode));
   }, [themeMode]);
 
   const switchTheme = () => {
-    setThemeMode(!themeMode);
-    console.log("theme: ", themeMode);
+    dispatch(setThemeMode(!themeMode));
+    // console.log("Ari theme: ", themeMode);
   };
 
-  return { themeMode, switchTheme, lightColors, darkColors };
+  return { themeMode, switchTheme, lightColors, darkColors, setTheme };
 };
 
 export default useThemeMode;

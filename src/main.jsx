@@ -5,6 +5,8 @@ import router from "./routes";
 import { ThemeProvider } from "styled-components";
 import useThemeMode from "./hooks/Theme/useThemeMode";
 import GlobalStyle from "./styles/GlobalStyles";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 
 const Main = () => {
   const { themeMode, darkColors, lightColors } = useThemeMode();
@@ -12,12 +14,18 @@ const Main = () => {
     <ThemeProvider theme={themeMode ? darkColors : lightColors}>
       <GlobalStyle />
       <RouterProvider router={router} />
+
+      <center>
+        <h1>theme: {themeMode ? "dark" : "light"}</h1>
+      </center>
     </ThemeProvider>
   );
 };
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Main />
+    <Provider store={store}>
+      <Main />
+    </Provider>
   </StrictMode>,
 );

@@ -6,10 +6,6 @@ import NavbarStyled from "./NavbarStyled";
 
 const Navbar = () => {
   const { switchTheme } = useThemeMode();
-  const switchThemeAndReload = () => {
-    switchTheme();
-    window.location.reload();
-  };
   return (
     <NavbarStyled>
       <nav>
@@ -31,7 +27,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
-      <button onClick={switchThemeAndReload}>switch theme</button>
+      <button onClick={switchTheme}>switch theme</button>
     </NavbarStyled>
   );
 };
