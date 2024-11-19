@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import MarcoTeoricoPage from "./pages/MarcoTeorico/MarcoTeorico";
-import DashboardLayout from "./components/DashboardLayout/Navbar";
+import DashboardLayout from "./sections/DashboardLayout/Navbar";
 
 const router = createBrowserRouter([
   {
