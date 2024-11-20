@@ -78,3 +78,8 @@ project directory structure:
 │   └── utils/
 
 Project settings: - Node Version: v20.14.0
+
+Design:
+![dashboard1](https://cdn.dribbble.com/userupload/2621687/file/original-20f95fc9c1a9231cf8dbdfb19856001b.png?resize=752x&vertical=center)
+![dashboard2](https://cdn.dribbble.com/userupload/10025761/file/original-ad6a5718afbce8d35cf392089a591ba4.png?resize=752x&vertical=center)
+![dashboard3](https://cdn.dribbble.com/userupload/15750896/file/original-df0ccd543af3ef0e703ee2b6880d958a.png?resize=752x&vertical=center)
