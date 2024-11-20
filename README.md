@@ -26,6 +26,16 @@ git push origin feature/your-feature-branch
 
 7. Ir a tu repositorio en github y hacer un "pull request" desde github
 
+Sync:
+
+```
+git remote add upstream https://github.com/freddyvelarde/hipermaxi-inventario.git
+git fetch upstream
+git merge upstream/master
+
+
+```
+
 setup:
 
 Instalar dependencias:
