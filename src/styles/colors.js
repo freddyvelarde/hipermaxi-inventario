@@ -7,7 +7,7 @@ export const darkColors = {
   accent: "#30F1E4",
   highlight: "#2394DF",
   textHeading: "#FFF",
-  textBody: "#D5D7D8",
+  textBody: "#C6D0F5",
   error: "#F38BA8",
 };
 export const lightColors = {
