@@ -14,10 +14,6 @@ const Main = () => {
     <ThemeProvider theme={themeMode ? darkColors : lightColors}>
       <GlobalStyle />
       <RouterProvider router={router} />
-
-      <center>
-        <h1>theme: {themeMode ? "dark" : "light"}</h1>
-      </center>
     </ThemeProvider>
   );
 };

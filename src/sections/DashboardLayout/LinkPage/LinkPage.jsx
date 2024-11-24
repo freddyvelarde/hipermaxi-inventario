@@ -5,12 +5,19 @@ import { useState } from "react";
 import { ArrowRightStyled, LinkPageStyled } from "./LinkPageStyled";
 import useThemeMode from "../../../hooks/Theme/useThemeMode";
 
-const LinkPage = ({ data, mainLink, titleLink, icons }) => {
+const LinkPage = ({
+  data,
+  mainLink,
+  titleLink,
+  icons,
+  callbackEvent,
+  stateLink,
+}) => {
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
   return (
-    <LinkPageStyled>
+    <LinkPageStyled state={stateLink}>
       <div className="header-link-menu">
         <div className="main_section">
           {icons ? (
@@ -18,11 +25,13 @@ const LinkPage = ({ data, mainLink, titleLink, icons }) => {
               id="icon_link"
               src={themeMode ? icons.dark : icons.light}
               alt="main-icon"
-              width={20}
+              width={18}
             />
           ) : null}
 
-          <Link to={`/${mainLink}`}>{titleLink}</Link>
+          <Link onClick={callbackEvent} to={`/${mainLink}`}>
+            {titleLink}
+          </Link>
         </div>
         {data ? (
           <ArrowRightStyled
@@ -30,7 +39,7 @@ const LinkPage = ({ data, mainLink, titleLink, icons }) => {
             onClick={() => setDisplayContent(!isDisplayed)}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
-            width={20}
+            width={18}
           />
         ) : null}
       </div>
@@ -39,7 +48,9 @@ const LinkPage = ({ data, mainLink, titleLink, icons }) => {
         ? data.map((item, key) => (
             <div className="child-links" key={key}>
               <li>
-                <Link to={item.link}>{item.name}</Link>
+                <Link id="child" to={`${mainLink}/${item.link}`}>
+                  {item.name}
+                </Link>
               </li>
             </div>
           ))
