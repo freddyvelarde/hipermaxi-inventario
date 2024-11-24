@@ -1,8 +1,6 @@
-import PageStyled from "../../styles/PageStyled";
-
 const Home = () => {
   return (
-    <PageStyled>
+    <div>
       <h1>App page</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
@@ -10,7 +8,7 @@ const Home = () => {
         accusantium pariatur sapiente, magni aliquid reiciendis reprehenderit
         nobis repellat? Placeat, saepe ullam.
       </p>
-    </PageStyled>
+    </div>
   );
 };
 
