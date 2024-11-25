@@ -24,6 +24,8 @@ export const Menu = styled.div`
 `;
 
 export const NavbarStyled = styled.div`
+  overflow-y: auto;
+  z-index: 1000;
   font-size: 14px;
   color: ${(props) => props.theme.textHeading};
   // text-indent: 10px;

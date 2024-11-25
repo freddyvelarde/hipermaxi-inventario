@@ -18,7 +18,7 @@ export const lightColors = {
   // surface: "#f4f4f5",
   surface: "#ED6A0F",
   background: "#fff",
-  overlay: "#fbfbfb",
+  overlay: "#e8ebeb",
   primaryButton: "#FA9332",
   secondaryButton: "#5A95FF",
   accent: "#5ACEB3",
