@@ -18,65 +18,47 @@ import menuDark from "./assets/menu_dark.svg";
 import menuLight from "./assets/menuLight.svg";
 import useThemeMode from "../../hooks/Theme/useThemeMode";
 
-const Navbar = ({ menuOpen }) => {
-  const [linksState, setLinksState] = useState({
-    inicio: true,
-    analisis: false,
-    orientado: false,
-    marco: false,
-    video: false,
-  });
-
-  const changeLinkStateInicio = () => {
-    setLinksState({
-      inicio: true,
-      analisis: false,
-      orientado: false,
-      marco: false,
-      video: false,
-    });
-    console.log(linksState);
-  };
-  const changeLinkStateAnalisis = () => {
-    setLinksState({
-      inicio: false,
-      analisis: true,
-      orientado: false,
-      marco: false,
-      video: false,
-    });
-    console.log(linksState);
-  };
-  const changeLinkStateOrientado = () => {
-    setLinksState({
-      inicio: false,
-      analisis: false,
-      orientado: true,
-      marco: false,
-      video: false,
-    });
-    console.log(linksState);
-  };
-  const changeLinkStateMarco = () => {
-    setLinksState({
-      inicio: false,
-      analisis: false,
-      orientado: false,
-      marco: true,
-      video: false,
-    });
-    console.log(linksState);
-  };
-  const changeLinkStateVideo = () => {
-    setLinksState({
-      inicio: false,
-      analisis: false,
-      orientado: false,
-      marco: false,
-      video: true,
-    });
-    console.log(linksState);
-  };
+const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
+  const links = [
+    {
+      title: "Inicio",
+      link: "",
+      icons: { dark: homeDark, light: homeLight },
+      id: "inicio",
+    },
+    {
+      title: "Analisis Estructurado",
+      link: "analisis-estructurado",
+      icons: {
+        dark: analisisEstructuradoDark,
+        light: analisisEstructuradoLight,
+      },
+      id: "analisis",
+      data: [
+        { name: "modelo ambiental", link: "#modelo_ambiental" },
+        { name: "modelo de comportamiento", link: "#modelo_comportamiento" },
+      ],
+    },
+    {
+      title: "Orientado a objetos",
+      link: "orientado-objetos",
+      icons: { dark: orientado_objetos_dark, light: orientado_objetos_light },
+      id: "orientado",
+    },
+    {
+      title: "Marco Teorico",
+      link: "marco-teorico",
+      icons: { dark: documentDark, light: documentLight },
+      id: "marco",
+      data: [{ name: "subtitle", link: "#subtitle" }],
+    },
+    {
+      title: "Video",
+      link: "video",
+      icons: { dark: videoDark, light: videoLight },
+      id: "video",
+    },
+  ];
 
   return (
     <NavbarStyled state={menuOpen}>
@@ -85,55 +67,19 @@ const Navbar = ({ menuOpen }) => {
           <h1>Hipermaxi</h1>
         </div>
       </header>
-
       <nav>
         <ul>
-          <LinkPage
-            titleLink="Inicio"
-            mainLink=""
-            icons={{ dark: homeDark, light: homeLight }}
-            callbackEvent={changeLinkStateInicio}
-            stateLink={linksState.inicio}
-          />
-          <LinkPage
-            callbackEvent={changeLinkStateAnalisis}
-            stateLink={linksState.analisis}
-            titleLink="Analisis Estructurado"
-            mainLink="analisis-estructurado"
-            data={[{ name: "analisis 1", link: "#analisis1" }]}
-            icons={{
-              dark: analisisEstructuradoDark,
-              light: analisisEstructuradoLight,
-            }}
-          />
-          <LinkPage
-            stateLink={linksState.orientado}
-            callbackEvent={changeLinkStateOrientado}
-            titleLink="Orientado a objetos"
-            mainLink="orientado-objetos"
-            icons={{
-              dark: orientado_objetos_dark,
-              light: orientado_objetos_light,
-            }}
-          />
-          <LinkPage
-            stateLink={linksState.marco}
-            callbackEvent={changeLinkStateMarco}
-            titleLink="Marco Teorico"
-            mainLink="marco-teorico"
-            icons={{ dark: documentDark, light: documentLight }}
-            data={[
-              { name: "title1", link: "#title" },
-              { name: "title2", link: "#title2" },
-            ]}
-          />
-          <LinkPage
-            stateLink={linksState.video}
-            callbackEvent={changeLinkStateVideo}
-            titleLink="Video"
-            mainLink="video"
-            icons={{ dark: videoDark, light: videoLight }}
-          />
+          {links.map(({ title, link, icons, id, data }) => (
+            <LinkPage
+              key={id}
+              titleLink={title}
+              mainLink={link}
+              icons={icons}
+              callbackEvent={() => setActiveLink(id)}
+              stateLink={activeLink === id}
+              data={data}
+            />
+          ))}
         </ul>
       </nav>
       <SwitchThemeButton />
@@ -144,10 +90,10 @@ const Navbar = ({ menuOpen }) => {
 const DashboardLayout = () => {
   const { themeMode } = useThemeMode();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState("inicio");
   const location = useLocation();
-  const switchMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+
+  const switchMenu = () => setMenuOpen(!menuOpen);
 
   useEffect(() => {
     const hash = location.hash;
@@ -158,11 +104,20 @@ const DashboardLayout = () => {
       }
     }
   }, [location]);
+
   return (
     <>
-      <Navbar menuOpen={menuOpen} />
+      <Navbar
+        menuOpen={menuOpen}
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
+      />
       <Menu>
-        <img src={themeMode ? menuDark : menuLight} onClick={switchMenu} />
+        <img
+          src={themeMode ? menuDark : menuLight}
+          onClick={switchMenu}
+          alt="Toggle Menu"
+        />
       </Menu>
       <main>
         <Outlet />

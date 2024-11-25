@@ -15,7 +15,8 @@ export const darkColors = {
   textUnselected: "#C6D0F5",
 };
 export const lightColors = {
-  surface: "#f4f4f5",
+  // surface: "#f4f4f5",
+  surface: "#ED6A0F",
   background: "#fff",
   overlay: "#fbfbfb",
   primaryButton: "#FA9332",

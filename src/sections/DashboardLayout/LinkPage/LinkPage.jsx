@@ -16,6 +16,11 @@ const LinkPage = ({
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
+  const mainLinkEvent = () => {
+    callbackEvent();
+    setDisplayContent(!isDisplayed);
+  };
+
   return (
     <LinkPageStyled state={stateLink}>
       <div className="header-link-menu">
@@ -29,14 +34,14 @@ const LinkPage = ({
             />
           ) : null}
 
-          <Link onClick={callbackEvent} to={`/${mainLink}`}>
+          <Link onClick={mainLinkEvent} to={`/${mainLink}`}>
             {titleLink}
           </Link>
         </div>
         {data ? (
           <ArrowRightStyled
             isDisplayed={isDisplayed}
-            onClick={() => setDisplayContent(!isDisplayed)}
+            onClick={mainLinkEvent}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
             width={18}
@@ -48,7 +53,11 @@ const LinkPage = ({
         ? data.map((item, key) => (
             <div className="child-links" key={key}>
               <li>
-                <Link id="child" to={`${mainLink}/${item.link}`}>
+                <Link
+                  onClick={callbackEvent}
+                  id="child"
+                  to={`${mainLink}/${item.link}`}
+                >
                   {item.name}
                 </Link>
               </li>

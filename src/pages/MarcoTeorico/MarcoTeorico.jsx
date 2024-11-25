@@ -108,7 +108,7 @@ const MarcoTeoricoPage = () => {
         officiis amet alias quaerat pariatur, omnis corrupti impedit? Id sint ea
         illum!
       </p>
-      <h1 id="title">title</h1>
+      <h1 id="subtitle">title</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis recusandae
         suscipit minima maxime obcaecati? Reprehenderit dolores atque voluptatem

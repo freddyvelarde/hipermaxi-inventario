@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const LinkPageStyled = styled.div`
+  // transition: 0.2s ease-out;
   color: ${(props) =>
     props.state ? props.theme.textHeading : props.theme.textUnselected};
   line-height: 30px;
@@ -36,7 +37,7 @@ export const LinkPageStyled = styled.div`
   }
   &:hover {
     // background: ${(props) => props.theme.surface};
-    transition: 0.3s;
+    // transition: 0.3s;
     color: ${(props) => props.theme.textHeading};
   }
 `;
