@@ -35,8 +35,43 @@ const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
       },
       id: "analisis",
       data: [
-        { name: "modelo ambiental", link: "#modelo_ambiental" },
-        { name: "modelo de comportamiento", link: "#modelo_comportamiento" },
+        {
+          name: "Modelo Ambiental",
+          link: "#modelo_ambiental",
+          data: [
+            {
+              name: "Declaración de propósitos",
+              link: "#declaracion_de_propositos",
+            },
+            {
+              name: "Lista de acontecimientos",
+              link: "#lista_de_acontecimientos",
+            },
+            {
+              name: "Diagrama de contexto",
+              link: "#diagrama_de_contexto",
+            },
+          ],
+        },
+
+        {
+          name: "modelo de comportamiento",
+          link: "#modelo_comportamiento",
+          data: [
+            {
+              name: "Diagrama de flujo de datos",
+              link: "#diagrama_flujo_datos",
+            },
+            {
+              name: "Diagrama DEER",
+              link: "#diagrama_deer",
+            },
+            {
+              name: "DICCIONARIO DE DATOS",
+              link: "#diccionario_datos",
+            },
+          ],
+        },
       ],
     },
     {
@@ -59,13 +94,11 @@ const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
       id: "video",
     },
   ];
-
   return (
     <NavbarStyled state={menuOpen}>
       <header>
-        <div>
-          <h1>Hipermaxi</h1>
-        </div>
+        <h1>Hipermaxi</h1>
+        <SwitchThemeButton />
       </header>
       <nav>
         <ul>
@@ -82,7 +115,6 @@ const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
           ))}
         </ul>
       </nav>
-      <SwitchThemeButton />
     </NavbarStyled>
   );
 };

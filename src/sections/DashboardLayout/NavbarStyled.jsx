@@ -29,7 +29,7 @@ export const NavbarStyled = styled.div`
   // text-indent: 10px;
   letter-spacing: 0px;
   line-height: 35px;
-  width: 20%;
+  width: 25%;
   background: ${(props) => props.theme.overlay};
   position: fixed;
   top: 0;
@@ -38,9 +38,11 @@ export const NavbarStyled = styled.div`
   padding: 0 0.5%;
   height: 100vh;
   header {
-    // background: red;
     padding: 10px 0;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   transition: 0.3s easy;
   @media (max-width: 1000px) {
