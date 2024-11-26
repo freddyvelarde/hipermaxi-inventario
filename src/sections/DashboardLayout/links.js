@@ -68,12 +68,34 @@ export const links = [
     link: "orientado-objetos",
     icons: { dark: orientado_objetos_dark, light: orientado_objetos_light },
     id: "orientado",
+    data: [
+      {
+        name: "sub-menu1",
+        link: "#submenu1",
+        data: [
+          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+        ],
+      },
+      { name: "sub-menu2", link: "#submenu2" },
+    ],
   },
   {
     title: "Marco Teorico",
     link: "marco-teorico",
     icons: { dark: documentDark, light: documentLight },
     id: "marco",
+    data: [
+      {
+        name: "sub-menu1",
+        link: "#submenu1",
+        data: [
+          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+        ],
+      },
+      { name: "sub-menu2", link: "#submenu2" },
+    ],
   },
   {
     title: "Video",

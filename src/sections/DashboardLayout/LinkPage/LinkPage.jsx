@@ -19,10 +19,16 @@ const SubLinkPage = ({
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
-  const toggleSubMenu = () => setDisplayContent((prev) => !prev);
+  const toggleClickSubMenu = () => setDisplayContent((prev) => !prev);
+  const openSubMenuHover = () => setDisplayContent(true);
+  // const closeSubMenuHover = () => setDisplayContent(false);
 
   return (
-    <SubLinkPageStyled>
+    <SubLinkPageStyled
+      onClick={toggleClickSubMenu}
+      onMouseEnter={openSubMenuHover}
+      // onMouseLeave={closeSubMenuHover}
+    >
       <div className="header-link-submenu">
         <div className="main_section">
           <Link onClick={callbackEvent} to={`/${mainLink}`}>
@@ -32,11 +38,12 @@ const SubLinkPage = ({
         {data && (
           <ArrowRightStyled
             isDisplayed={isDisplayed}
-            onClick={toggleSubMenu}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
             width={18}
-          />
+          >
+            &#10148;
+          </ArrowRightStyled>
         )}
       </div>
       {isDisplayed && data && (
@@ -67,13 +74,25 @@ const LinkPage = ({
   callbackEvent,
   stateLink,
 }) => {
+  const [clicked, setClicked] = useState(false);
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
-  const toggleSubMenu = () => setDisplayContent((prev) => !prev);
+  const toggleClickSubMenu = () => {
+    setDisplayContent((prev) => !prev);
+    setClicked((prev) => !prev);
+  };
+
+  const openMenuHover = () => setDisplayContent(true);
+  const closeMenuHover = () => setDisplayContent(false);
 
   return (
-    <LinkPageStyled state={stateLink}>
+    <LinkPageStyled
+      state={stateLink}
+      onMouseEnter={openMenuHover}
+      onMouseLeave={closeMenuHover}
+      onClick={toggleClickSubMenu}
+    >
       <div className="header-link-menu">
         <div className="main_section">
           {icons && (
@@ -90,15 +109,17 @@ const LinkPage = ({
         </div>
         {data && (
           <ArrowRightStyled
-            isDisplayed={isDisplayed}
-            onClick={toggleSubMenu}
+            isClicked={clicked}
+            isDisplayed={isDisplayed || clicked}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
             width={18}
-          />
+          >
+            &#10148;
+          </ArrowRightStyled>
         )}
       </div>
-      {isDisplayed && data && (
+      {(isDisplayed || clicked) && data && (
         <div className="submenu">
           {data.map((item, key) => (
             <div className="child-links" key={key}>
