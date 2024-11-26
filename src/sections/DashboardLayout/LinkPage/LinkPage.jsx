@@ -15,6 +15,7 @@ const SubLinkPage = ({
   titleLink,
   callbackEvent,
   shortLink,
+  toggleClickMenu,
 }) => {
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
@@ -22,16 +23,23 @@ const SubLinkPage = ({
   const toggleClickSubMenu = () => setDisplayContent((prev) => !prev);
   const openSubMenuHover = () => setDisplayContent(true);
   // const closeSubMenuHover = () => setDisplayContent(false);
+  //
 
+  const isMobile = window.innerWidth > 768;
   return (
     <SubLinkPageStyled
-      onClick={toggleClickSubMenu}
-      onMouseEnter={openSubMenuHover}
+      onMouseEnter={isMobile ? openSubMenuHover : null}
       // onMouseLeave={closeSubMenuHover}
     >
       <div className="header-link-submenu">
         <div className="main_section">
-          <Link onClick={callbackEvent} to={`/${mainLink}`}>
+          <Link
+            onClick={() => {
+              toggleClickMenu();
+              callbackEvent();
+            }}
+            to={`/${mainLink}`}
+          >
             {titleLink}
           </Link>
         </div>
@@ -40,6 +48,9 @@ const SubLinkPage = ({
             isDisplayed={isDisplayed}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
+            onClick={() => {
+              toggleClickSubMenu();
+            }}
             width={18}
           >
             &#10148;
@@ -54,8 +65,11 @@ const SubLinkPage = ({
                 <SubLinkPage
                   titleLink={item.name}
                   mainLink={`${shortLink}/${item.link}`}
-                  callbackEvent={callbackEvent}
+                  callbackEvent={() => {
+                    callbackEvent();
+                  }}
                   data={item.data}
+                  toggleClickMenu={toggleClickMenu}
                 />
               </li>
             </div>
@@ -78,10 +92,17 @@ const LinkPage = ({
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
-  const toggleClickSubMenu = () => {
+  const toggleClickSubMenu1 = () => {
     setDisplayContent((prev) => !prev);
     setClicked((prev) => !prev);
   };
+
+  const toggleSubMenuToTheParentState = () => {
+    setDisplayContent(true);
+    setClicked(true);
+    console.log("Hey jude!");
+  };
+  const isMobile = window.innerWidth < 768;
 
   const openMenuHover = () => setDisplayContent(true);
   const closeMenuHover = () => setDisplayContent(false);
@@ -89,9 +110,8 @@ const LinkPage = ({
   return (
     <LinkPageStyled
       state={stateLink}
-      onMouseEnter={openMenuHover}
-      onMouseLeave={closeMenuHover}
-      onClick={toggleClickSubMenu}
+      onMouseEnter={!isMobile ? openMenuHover : null}
+      onMouseLeave={!isMobile ? closeMenuHover : null}
     >
       <div className="header-link-menu">
         <div className="main_section">
@@ -109,6 +129,7 @@ const LinkPage = ({
         </div>
         {data && (
           <ArrowRightStyled
+            onClick={toggleClickSubMenu1}
             isClicked={clicked}
             isDisplayed={isDisplayed || clicked}
             src={themeMode ? arrow_right_dark : arrow_right_light}
@@ -130,6 +151,7 @@ const LinkPage = ({
                   shortLink={mainLink}
                   callbackEvent={callbackEvent}
                   data={item.data}
+                  toggleClickMenu={toggleSubMenuToTheParentState}
                 />
               </li>
             </div>
