@@ -87,43 +87,6 @@ export const LinkPageStyled = styled.div`
   }
 `;
 
-// export const ArrowRightStyled = styled.img`
-//   width: 20px;
-//   transform: rotate(${(props) => (props.isDisplayed ? "90deg" : "0deg")});
-//   transition: transform 0.3s ease; /* Optional smooth animation */
-// `;
-// export const ArrowRightStyled = styled.span`
-//   width: 20px;
-//   transform: rotate(${(props) => (props.isDisplayed ? "90deg" : "0deg")});
-//   transition: transform 0.3s ease;
-//   cursor: pointer;
-//   font-size: 20px;
-//   color: ${(props) =>
-//     props.isClicked ? props.theme.error : props.theme.textBody};
-//
-//   transform: ${(props) => (props.isClicked ? "scale(1.1)" : "scale(1)")};
-//
-//   &:hover {
-//     filter: brightness(1.2);
-//   }
-// `;
-// export const ArrowRightStyled = styled.span`
-//   width: 20px;
-//   transform: rotate(${(props) => (props.isDisplayed ? "90deg" : "0deg")})
-//     scale(${(props) => (props.isClicked ? "1.3" : "1")});
-//   transition: transform 0.3s ease; /* Smooth animation for both */
-//   cursor: pointer;
-//   font-size: 20px;
-//   color: ${(props) =>
-//     props.isClicked ? props.theme.error : props.theme.textBody};
-//
-//   &:hover {
-//     filter: brightness(1.2); /* Subtle hover effect */
-//   }
-//   @media (max-width: 750px) {
-//     font-stretch: extra-condensed;
-//   }
-// `;
 export const ArrowRightStyled = styled.span`
   display: inline-block;
   font-size: 20px;

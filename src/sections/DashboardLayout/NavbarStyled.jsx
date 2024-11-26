@@ -1,5 +1,28 @@
 import styled from "styled-components";
 
+export const ToggleNavbar = styled.div`
+  border-radius: 50%;
+  color: ${(props) => props.theme.textHeading};
+  background: ${(props) => props.theme.secondaryButton};
+  cursor: pointer;
+  border: none;
+  font-size: 17px;
+  position: fixed;
+  padding: 0 6px;
+  top: 49%;
+  right: 73.9%;
+  transform: ${(props) =>
+    !props.simpleNavbarActive ? "translateX(0)" : "translateX(-21.3vw)"};
+  z-index: 2000;
+  transition: 0.1s ease-out;
+  // &:hover {
+  //   transform: scale(1.21);
+  // }
+  @media (max-width: 730px) {
+    display: none;
+  }
+`;
+
 export const Menu = styled.div`
   padding: 5px 5px 0px 5px;
   background: transparent;
@@ -39,6 +62,8 @@ export const NavbarStyled = styled.div`
   margin: 0;
   padding: 0 0.5%;
   height: 100vh;
+  transform: ${(props) =>
+    !props.simpleNavbarActive ? "translateX(0) " : "translateX(-100vw)"};
   header {
     padding: 10px 0;
     margin-bottom: 20px;
@@ -46,7 +71,7 @@ export const NavbarStyled = styled.div`
     flex-direction: row;
     justify-content: space-between;
   }
-  transition: 0.3s easy;
+  transition: 0.3s ease-out;
   @media (max-width: 1000px) {
     font-size: 14px;
     width: 25%;

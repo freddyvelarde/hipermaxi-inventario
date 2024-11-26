@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import { Menu, NavbarStyled } from "./NavbarStyled";
+import { Menu, NavbarStyled, ToggleNavbar } from "./NavbarStyled";
 import LinkPage from "./LinkPage/LinkPage";
 // icons
 import SwitchThemeButton from "../../components/SwitchThemeButton/SwitchThemeButton";
@@ -9,10 +9,48 @@ import menuLight from "./assets/menuLight.svg";
 import useThemeMode from "../../hooks/Theme/useThemeMode";
 import hipermaxiLogo from "../../assets/hipermaxi-logo.png";
 import { links } from "./links";
+import { LinkIcon, SimpleNavbarStyled } from "./SimpleNavbarStyled";
+import { Link } from "react-router-dom";
+import useMiniDashboardActive from "../../hooks/MiniDashboardActive/useMiniDashboardActive";
 
-const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
+const SimpleNavbar = ({ simpleNavbarActive, activeLink, setActiveLink }) => {
+  const { themeMode } = useThemeMode();
+
   return (
-    <NavbarStyled state={menuOpen}>
+    <SimpleNavbarStyled simpleNavbarActive={simpleNavbarActive}>
+      <nav>
+        <ul>
+          {links.map(({ link, icons, id }) => (
+            <li>
+              <LinkIcon
+                stateLink={activeLink == id}
+                onClick={() => setActiveLink(id)}
+              >
+                <Link to={link}>
+                  <img
+                    src={themeMode ? icons.dark : icons.light}
+                    alt=""
+                    width={20}
+                  />
+                </Link>
+              </LinkIcon>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <SwitchThemeButton />
+    </SimpleNavbarStyled>
+  );
+};
+
+const Navbar = ({
+  menuOpen,
+  activeLink,
+  setActiveLink,
+  simpleNavbarActive,
+}) => {
+  return (
+    <NavbarStyled state={menuOpen} simpleNavbarActive={simpleNavbarActive}>
       <header>
         <img src={hipermaxiLogo} alt="hipermaxi-logo" width={120} />
 
@@ -44,6 +82,8 @@ const DashboardLayout = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState("inicio");
   const location = useLocation();
+  const { dashboardLayoutActive, switchDashboardLayoutActive } =
+    useMiniDashboardActive();
 
   const switchMenu = () => setMenuOpen(!menuOpen);
 
@@ -63,6 +103,12 @@ const DashboardLayout = () => {
         menuOpen={menuOpen}
         activeLink={activeLink}
         setActiveLink={setActiveLink}
+        simpleNavbarActive={dashboardLayoutActive}
+      />
+      <SimpleNavbar
+        simpleNavbarActive={dashboardLayoutActive}
+        activeLink={activeLink}
+        setActiveLink={setActiveLink}
       />
       <Menu>
         <img
@@ -71,6 +117,12 @@ const DashboardLayout = () => {
           alt="Toggle Menu"
         />
       </Menu>
+      <ToggleNavbar
+        simpleNavbarActive={dashboardLayoutActive}
+        onClick={switchDashboardLayoutActive}
+      >
+        &#10148;
+      </ToggleNavbar>
       <main>
         <Outlet />
       </main>
