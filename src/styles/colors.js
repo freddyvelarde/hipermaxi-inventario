@@ -16,13 +16,13 @@ export const darkColors = {
 };
 export const lightColors = {
   // surface: "#f4f4f5",
-  surface: "#ED6A0F",
+  surface: "#5A95FF",
   background: "#fff",
   overlay: "#e8ebeb",
   primaryButton: "#FA9332",
-  secondaryButton: "#5A95FF",
+  secondaryButton: "#0EC285",
   accent: "#5ACEB3",
-  highlight: "#0EC285",
+  highlight: "#ED6A0F",
   textBody: "#060f12",
   textHeading: "#0D0D0D",
   error: "#FF5C5C",

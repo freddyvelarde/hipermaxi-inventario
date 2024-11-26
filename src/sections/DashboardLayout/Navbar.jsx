@@ -26,7 +26,9 @@ const Navbar = ({ menuOpen, activeLink, setActiveLink }) => {
               titleLink={title}
               mainLink={link}
               icons={icons}
-              callbackEvent={() => setActiveLink(id)}
+              callbackEvent={() => {
+                setActiveLink(id);
+              }}
               stateLink={activeLink === id}
               data={data}
             />

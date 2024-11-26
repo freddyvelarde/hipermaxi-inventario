@@ -15,28 +15,46 @@ const SubLinkPage = ({
   titleLink,
   callbackEvent,
   shortLink,
+  toggleClickMenu,
 }) => {
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
-  const toggleSubMenu = () => setDisplayContent((prev) => !prev);
+  const toggleClickSubMenu = () => setDisplayContent((prev) => !prev);
+  const openSubMenuHover = () => setDisplayContent(true);
+  // const closeSubMenuHover = () => setDisplayContent(false);
+  //
 
+  const isMobile = window.innerWidth > 768;
   return (
-    <SubLinkPageStyled>
+    <SubLinkPageStyled
+      onMouseEnter={isMobile ? openSubMenuHover : null}
+      // onMouseLeave={closeSubMenuHover}
+    >
       <div className="header-link-submenu">
         <div className="main_section">
-          <Link onClick={callbackEvent} to={`/${mainLink}`}>
+          <Link
+            onClick={() => {
+              toggleClickMenu();
+              callbackEvent();
+            }}
+            to={`/${mainLink}`}
+          >
             {titleLink}
           </Link>
         </div>
         {data && (
           <ArrowRightStyled
             isDisplayed={isDisplayed}
-            onClick={toggleSubMenu}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
+            onClick={() => {
+              toggleClickSubMenu();
+            }}
             width={18}
-          />
+          >
+            &#10148;
+          </ArrowRightStyled>
         )}
       </div>
       {isDisplayed && data && (
@@ -47,8 +65,11 @@ const SubLinkPage = ({
                 <SubLinkPage
                   titleLink={item.name}
                   mainLink={`${shortLink}/${item.link}`}
-                  callbackEvent={callbackEvent}
+                  callbackEvent={() => {
+                    callbackEvent();
+                  }}
                   data={item.data}
+                  toggleClickMenu={toggleClickMenu}
                 />
               </li>
             </div>
@@ -67,13 +88,31 @@ const LinkPage = ({
   callbackEvent,
   stateLink,
 }) => {
+  const [clicked, setClicked] = useState(false);
   const [isDisplayed, setDisplayContent] = useState(false);
   const { themeMode } = useThemeMode();
 
-  const toggleSubMenu = () => setDisplayContent((prev) => !prev);
+  const toggleClickSubMenu1 = () => {
+    setDisplayContent((prev) => !prev);
+    setClicked((prev) => !prev);
+  };
+
+  const toggleSubMenuToTheParentState = () => {
+    setDisplayContent(true);
+    setClicked(true);
+    console.log("Hey jude!");
+  };
+  const isMobile = window.innerWidth < 768;
+
+  const openMenuHover = () => setDisplayContent(true);
+  const closeMenuHover = () => setDisplayContent(false);
 
   return (
-    <LinkPageStyled state={stateLink}>
+    <LinkPageStyled
+      state={stateLink}
+      onMouseEnter={!isMobile ? openMenuHover : null}
+      onMouseLeave={!isMobile ? closeMenuHover : null}
+    >
       <div className="header-link-menu">
         <div className="main_section">
           {icons && (
@@ -90,15 +129,18 @@ const LinkPage = ({
         </div>
         {data && (
           <ArrowRightStyled
-            isDisplayed={isDisplayed}
-            onClick={toggleSubMenu}
+            onClick={toggleClickSubMenu1}
+            isClicked={clicked}
+            isDisplayed={isDisplayed || clicked}
             src={themeMode ? arrow_right_dark : arrow_right_light}
             alt="arrow-right"
             width={18}
-          />
+          >
+            &#10148;
+          </ArrowRightStyled>
         )}
       </div>
-      {isDisplayed && data && (
+      {(isDisplayed || clicked) && data && (
         <div className="submenu">
           {data.map((item, key) => (
             <div className="child-links" key={key}>
@@ -109,6 +151,7 @@ const LinkPage = ({
                   shortLink={mainLink}
                   callbackEvent={callbackEvent}
                   data={item.data}
+                  toggleClickMenu={toggleSubMenuToTheParentState}
                 />
               </li>
             </div>
