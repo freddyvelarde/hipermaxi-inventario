@@ -20,8 +20,8 @@ export const links = [
       { name: "Mision", link: "#mision" },
       { name: "Vision", link: "#vision" },
       {
-        name: "Pros y contras",
-        link: "#pros-contras",
+        name: "Ventajas",
+        link: "#ventajas",
         data: [
           { name: "Características Principales", link: "#caracteristicas" },
           { name: "Análisis Detallado", link: "#analisis-detallado" },
