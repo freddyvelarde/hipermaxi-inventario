@@ -14,10 +14,7 @@ export const ToggleNavbar = styled.div`
   transform: ${(props) =>
     !props.simpleNavbarActive ? "translateX(0)" : "translateX(-21.3vw)"};
   z-index: 2000;
-  transition: 0.1s ease-out;
-  // &:hover {
-  //   transform: scale(1.21);
-  // }
+  transition: 0.25s ease-out;
   @media (max-width: 730px) {
     display: none;
   }
@@ -67,7 +64,7 @@ export const NavbarStyled = styled.div`
   padding: 0 0.5%;
   height: 100vh;
   transform: ${(props) =>
-    !props.simpleNavbarActive ? "translateX(0) " : "translateX(-100vw)"};
+    !props.simpleNavbarActive ? "translateX(0) " : "translateX(-30vw)"};
   header {
     padding: 10px 0;
     margin-bottom: 20px;
@@ -90,7 +87,7 @@ export const NavbarStyled = styled.div`
     // left: ;
     // left: ${(props) => (props.state ? "0%" : "-40%")};
     transform: ${(props) =>
-      props.state ? "translateX(0) " : "translateX(-100vw)"};
+      props.state ? "translateX(0) " : "translateX(-20vw)"};
     transition: 0.4s ease-out;
   }
 `;
