@@ -8,6 +8,7 @@ import GlobalStyle from "./styles/GlobalStyles";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import useRouter from "./routes";
+import LoadingPage from "./components/Loading";
 
 const Main = () => {
   const { themeMode, darkColors, lightColors } = useThemeMode();
@@ -15,6 +16,7 @@ const Main = () => {
 
   return (
     <ThemeProvider theme={themeMode ? darkColors : lightColors}>
+      <LoadingPage />
       <GlobalStyle />
       <RouterProvider router={router} />
     </ThemeProvider>
