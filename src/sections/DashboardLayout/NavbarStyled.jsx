@@ -87,7 +87,8 @@ export const NavbarStyled = styled.div`
     // left: ;
     // left: ${(props) => (props.state ? "0%" : "-40%")};
     transform: ${(props) =>
-      props.state ? "translateX(0) " : "translateX(-20vw)"};
+      props.state ? "translateX(0) " : "translateX(-80vw)"};
     transition: 0.4s ease-out;
+    padding-bottom: 100px;
   }
 `;

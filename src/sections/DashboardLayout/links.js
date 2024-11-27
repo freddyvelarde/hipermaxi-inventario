@@ -77,7 +77,14 @@ export const links = [
           { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
         ],
       },
-      { name: "sub-menu2", link: "#submenu2" },
+      {
+        name: "sub-menu2",
+        link: "#submenu2",
+        data: [
+          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+        ],
+      },
     ],
   },
   {
@@ -102,5 +109,16 @@ export const links = [
     link: "video",
     icons: { dark: videoDark, light: videoLight },
     id: "video",
+    data: [
+      {
+        name: "sub-menu1",
+        link: "#submenu1",
+        data: [
+          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+        ],
+      },
+      { name: "sub-menu2", link: "#submenu2" },
+    ],
   },
 ];
