@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const PageStyled = styled.div`
   transition: 0.3s ease-out;
-  margin-left: ${(props) => (props.state ? "5%" : "26%")};
+  margin-left: ${(props) => (props.state ? "4%" : "25%")};
   margin-right: 1%;
   width: auto;
 

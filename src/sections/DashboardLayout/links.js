@@ -11,9 +11,13 @@ import documentDark from "./assets/documentDark.svg";
 export const links = [
   {
     title: "Inicio",
-    link: "",
+    link: "inicio",
     icons: { dark: homeDark, light: homeLight },
     id: "inicio",
+    data: [
+      { name: "Que es el Hipermaxi?", link: "#que-es-hipermaxi" },
+      { name: "Alcance", link: "#alcance" },
+    ],
   },
   {
     title: "Analisis Estructurado",

@@ -4,6 +4,7 @@ import MarcoTeoricoPage from "./pages/MarcoTeorico/MarcoTeorico";
 import DashboardLayout from "./sections/DashboardLayout/Navbar";
 import PageStyled from "./styles/PageStyled";
 import useMiniDashboardActive from "./hooks/MiniDashboardActive/useMiniDashboardActive";
+import HomeRedirect from "./components/HomeRedirect";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -11,10 +12,15 @@ const useRouter = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <DashboardLayout />,
+      element: (
+        <div>
+          <HomeRedirect />
+          <DashboardLayout />
+        </div>
+      ),
       children: [
         {
-          path: "/",
+          path: "/inicio",
           element: (
             <PageStyled state={dashboardLayoutActive}>
               {" "}

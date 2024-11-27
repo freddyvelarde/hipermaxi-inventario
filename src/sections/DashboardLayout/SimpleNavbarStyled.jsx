@@ -13,6 +13,9 @@ export const SimpleNavbarStyled = styled.div`
   transition: 0.3s ease-out;
   transform: ${(props) =>
     props.simpleNavbarActive ? "translateX(0) " : "translateX(-100vw)"};
+  @media (max-width: 730px) {
+    display: none;
+  }
 `;
 export const LinkIcon = styled.div`
   // display: flex;
