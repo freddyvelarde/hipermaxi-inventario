@@ -1,12 +1,15 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const HomeRedirect = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    navigate("/inicio");
-  }, [navigate]);
+    if (location.pathname === "/") {
+      navigate("/inicio");
+    }
+  }, [location, navigate]);
 
   return null;
 };
