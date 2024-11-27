@@ -106,7 +106,7 @@ const Check = styled.span`
 
 const InventoryComparison = () => {
   return (
-    <Container id="pros-contras">
+    <Container id="ventajas">
       <Title>Sistema de Inventario: Análisis Comparativo</Title>
 
       <Grid>

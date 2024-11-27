@@ -2,7 +2,6 @@ import banner from "./assets/banner-hipermaxi.jpg";
 import inv1 from "./assets/1.jpeg";
 import inv2 from "./assets/2.jpeg";
 import inv3 from "./assets/3.jpeg";
-import inv4 from "./assets/4.jpeg";
 import {
   HomeContainer,
   Header,
@@ -18,71 +17,9 @@ import mainDrawDark from "./assets/main_draw_dark.svg";
 import { Link } from "react-router-dom";
 
 import React from "react";
-import styled from "styled-components";
 import Card from "../../components/Card";
 import InventoryComparison from "../../components/ComparisoTable";
 
-const CardContainer = styled.div`
-  width: 320px;
-  background-color: ${(props) => props.theme.overlay};
-  border-radius: 8px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  color: ${(props) => props.theme.textHeading};
-  font-family: Arial, sans-serif;
-`;
-
-const IconWrapper = styled.div`
-  width: 40px;
-  height: 40px;
-  background-color: #3a3a3c; /* Slightly lighter background for the icon */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 16px;
-`;
-
-const CardTitle = styled.h3`
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0 0 12px 0;
-`;
-
-const Description = styled.p`
-  font-size: 14px;
-  line-height: 1.6;
-  margin: 0 0 16px 0;
-`;
-
-const CardLink = styled.a`
-  font-size: 14px;
-  font-weight: bold;
-  color: ${(props) => props.theme.primaryButton};
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-// const Card = ({ title, desc, link, linkDesc }) => {
-//   return (
-//     <CardContainer>
-//       <IconWrapper>
-//         <span role="img" aria-label="icon">
-//           👤
-//         </span>
-//       </IconWrapper>
-//       <CardTitle>{title}</CardTitle>
-//       <Description>{desc}</Description>
-//       <CardLink>
-//         <Link to={link}>{linkDesc} &rarr;</Link>
-//       </CardLink>
-//     </CardContainer>
-//   );
-// };
-//
 const Home = () => {
   // const images = [inv1, inv2, inv3, inv4];
 
@@ -99,7 +36,6 @@ const Home = () => {
         </Link>
         <img id="draw" src={mainDrawDark} alt="Ilustración de inicio" />
       </Header>
-
       <BodyContainer id="que-es-hipermaxi">
         <TextSection>
           <h1>¿Qué es Hipermaxi?</h1>
@@ -118,7 +54,6 @@ const Home = () => {
           <img src={banner} alt="Hipermaxi banner" />
         </BannerContainer>
       </BodyContainer>
-
       <BodyContainer id="alcance">
         <TextSection>
           <h1>Alcance del Proyecto</h1>
@@ -177,7 +112,6 @@ const Home = () => {
           <img src={inv3} alt="Vista del sistema de inventario en desarrollo" />
         </BannerContainer>
       </BodyContainer>
-
       <InventoryComparison />
       <div className="cards">
         <Card
