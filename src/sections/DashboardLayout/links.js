@@ -17,8 +17,8 @@ export const links = [
     data: [
       { name: "Que es el Hipermaxi?", link: "#que-es-hipermaxi" },
       { name: "Alcance", link: "#alcance" },
-      { name: "Vision", link: "#vision" },
       { name: "Mision", link: "#mision" },
+      { name: "Vision", link: "#vision" },
       {
         name: "Pros y contras",
         link: "#pros-contras",
