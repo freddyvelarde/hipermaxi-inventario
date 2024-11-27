@@ -17,11 +17,27 @@ color: ${(props) => props.theme.textHeading};
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-weight: bold;
+    font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   }
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 
   a {
 color: inherit;
     text-decoration: none;
+
+  font-family: "Montserrat", sans-serif;
+  // font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  // font-style: italic;
+  font-style: normal;
   }
 `;
 export default GlobalStyle;
