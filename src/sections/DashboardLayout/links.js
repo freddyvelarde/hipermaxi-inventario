@@ -37,102 +37,102 @@ export const links = [
       light: analisisEstructuradoLight,
     },
     id: "analisis",
-    data: [
-      {
-        name: "Modelo Ambiental",
-        link: "#modelo_ambiental",
-        data: [
-          {
-            name: "Declaración de propósitos",
-            link: "#declaracion_de_propositos",
-          },
-          {
-            name: "Lista de acontecimientos",
-            link: "#lista_de_acontecimientos",
-          },
-          {
-            name: "Diagrama de contexto",
-            link: "#diagrama_de_contexto",
-          },
-        ],
-      },
-
-      {
-        name: "modelo de comportamiento",
-        link: "#modelo_comportamiento",
-        data: [
-          {
-            name: "Diagrama de flujo de datos",
-            link: "#diagrama_flujo_datos",
-          },
-          {
-            name: "Diagrama DEER",
-            link: "#diagrama_deer",
-          },
-          {
-            name: "DICCIONARIO DE DATOS",
-            link: "#diccionario_datos",
-          },
-        ],
-      },
-    ],
+    // data: [
+    //   {
+    //     name: "Modelo Ambiental",
+    //     link: "#modelo_ambiental",
+    //     data: [
+    //       {
+    //         name: "Declaración de propósitos",
+    //         link: "#declaracion_de_propositos",
+    //       },
+    //       {
+    //         name: "Lista de acontecimientos",
+    //         link: "#lista_de_acontecimientos",
+    //       },
+    //       {
+    //         name: "Diagrama de contexto",
+    //         link: "#diagrama_de_contexto",
+    //       },
+    //     ],
+    //   },
+    //
+    //   {
+    //     name: "modelo de comportamiento",
+    //     link: "#modelo_comportamiento",
+    //     data: [
+    //       {
+    //         name: "Diagrama de flujo de datos",
+    //         link: "#diagrama_flujo_datos",
+    //       },
+    //       {
+    //         name: "Diagrama DEER",
+    //         link: "#diagrama_deer",
+    //       },
+    //       {
+    //         name: "DICCIONARIO DE DATOS",
+    //         link: "#diccionario_datos",
+    //       },
+    //     ],
+    //   },
+    // ],
   },
   {
     title: "Orientado a objetos",
     link: "orientado-objetos",
     icons: { dark: orientado_objetos_dark, light: orientado_objetos_light },
     id: "orientado",
-    data: [
-      {
-        name: "sub-menu1",
-        link: "#submenu1",
-        data: [
-          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-        ],
-      },
-      {
-        name: "sub-menu2",
-        link: "#submenu2",
-        data: [
-          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-        ],
-      },
-    ],
+    // data: [
+    //   {
+    //     name: "sub-menu1",
+    //     link: "#submenu1",
+    //     data: [
+    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+    //     ],
+    //   },
+    //   {
+    //     name: "sub-menu2",
+    //     link: "#submenu2",
+    //     data: [
+    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+    //     ],
+    //   },
+    // ],
   },
   {
     title: "Marco Teorico",
     link: "marco-teorico",
     icons: { dark: documentDark, light: documentLight },
     id: "marco",
-    data: [
-      {
-        name: "sub-menu1",
-        link: "#submenu1",
-        data: [
-          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-        ],
-      },
-      { name: "sub-menu2", link: "#submenu2" },
-    ],
+    // data: [
+    //   {
+    //     name: "sub-menu1",
+    //     link: "#submenu1",
+    //     data: [
+    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+    //     ],
+    //   },
+    //   { name: "sub-menu2", link: "#submenu2" },
+    // ],
   },
   {
     title: "Video",
     link: "video",
     icons: { dark: videoDark, light: videoLight },
     id: "video",
-    data: [
-      {
-        name: "sub-menu1",
-        link: "#submenu1",
-        data: [
-          { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-          { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-        ],
-      },
-      { name: "sub-menu2", link: "#submenu2" },
-    ],
+    // data: [
+    //   {
+    //     name: "sub-menu1",
+    //     link: "#submenu1",
+    //     data: [
+    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
+    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
+    //     ],
+    //   },
+    //   { name: "sub-menu2", link: "#submenu2" },
+    // ],
   },
 ];
