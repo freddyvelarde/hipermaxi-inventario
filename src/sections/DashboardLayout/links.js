@@ -37,45 +37,45 @@ export const links = [
       light: analisisEstructuradoLight,
     },
     id: "analisis",
-    // data: [
-    //   {
-    //     name: "Modelo Ambiental",
-    //     link: "#modelo_ambiental",
-    //     data: [
-    //       {
-    //         name: "Declaración de propósitos",
-    //         link: "#declaracion_de_propositos",
-    //       },
-    //       {
-    //         name: "Lista de acontecimientos",
-    //         link: "#lista_de_acontecimientos",
-    //       },
-    //       {
-    //         name: "Diagrama de contexto",
-    //         link: "#diagrama_de_contexto",
-    //       },
-    //     ],
-    //   },
-    //
-    //   {
-    //     name: "modelo de comportamiento",
-    //     link: "#modelo_comportamiento",
-    //     data: [
-    //       {
-    //         name: "Diagrama de flujo de datos",
-    //         link: "#diagrama_flujo_datos",
-    //       },
-    //       {
-    //         name: "Diagrama DEER",
-    //         link: "#diagrama_deer",
-    //       },
-    //       {
-    //         name: "DICCIONARIO DE DATOS",
-    //         link: "#diccionario_datos",
-    //       },
-    //     ],
-    //   },
-    // ],
+    data: [
+      {
+        name: "Modelo Ambiental",
+        link: "#modelo_ambiental",
+        data: [
+          {
+            name: "Declaración de propósitos",
+            link: "#declaracion_de_propositos",
+          },
+          {
+            name: "Lista de acontecimientos",
+            link: "#lista_de_acontecimientos",
+          },
+          {
+            name: "Diagrama de contexto",
+            link: "#diagrama_de_contexto",
+          },
+        ],
+      },
+
+      {
+        name: "modelo de comportamiento",
+        link: "#modelo_comportamiento",
+        data: [
+          {
+            name: "Diagrama de flujo de datos",
+            link: "#diagrama_flujo_datos",
+          },
+          {
+            name: "Diagrama DEER",
+            link: "#diagrama_deer",
+          },
+          {
+            name: "Diccionario de datos",
+            link: "#diccionario_datos",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Orientado a objetos",
