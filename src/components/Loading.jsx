@@ -29,9 +29,9 @@ const LogoPlaceholder = styled.div`
   // background: linear-gradient(to right, #333 8%, #444 18%, #333 33%);
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
@@ -44,9 +44,9 @@ const NavItemPlaceholder = styled.div`
   // background: linear-gradient(to right, #333 8%, #444 18%, #333 33%);
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
@@ -60,9 +60,9 @@ const TitlePlaceholder = styled.div`
   // background: linear-gradient(to right, #333 8%, #444 18%, #333 33%);
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
@@ -76,9 +76,9 @@ const SubtitlePlaceholder = styled.div`
   // background: linear-gradient(to right, #333 8%, #444 18%, #333 33%);
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
@@ -94,9 +94,9 @@ const ImagePlaceholder = styled.div`
   //
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
@@ -109,9 +109,9 @@ const TextPlaceholder = styled.div`
   // background: linear-gradient(to right, #333 8%, #444 18%, #333 33%);
   background: linear-gradient(
     to right,
-    ${(props) => props.theme.surface} 8%,
-    ${(props) => props.theme.overlay} 18%,
-    ${(props) => props.theme.surface} 33%
+    ${(props) => props.theme.overlay} 8%,
+    ${(props) => props.theme.surface} 18%,
+    ${(props) => props.theme.overlay} 33%
   );
   background-size: 2000px 100%;
   animation: ${shimmer} 2s linear infinite;
