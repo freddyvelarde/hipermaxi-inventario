@@ -123,7 +123,7 @@ const LinkPage = ({
               width={18}
             />
           )}
-          <Link onClick={callbackEvent} to={`/${mainLink}`}>
+          <Link onClick={callbackEvent} to={mainLink ? `${mainLink}` : "/test"}>
             {titleLink}
           </Link>
         </div>
