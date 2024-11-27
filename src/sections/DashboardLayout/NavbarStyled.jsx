@@ -21,6 +21,10 @@ export const ToggleNavbar = styled.div`
   @media (max-width: 730px) {
     display: none;
   }
+
+  @media (max-width: 850px) {
+    right: 68.9%;
+  }
 `;
 
 export const Menu = styled.div`
