@@ -17,6 +17,16 @@ export const links = [
     data: [
       { name: "Que es el Hipermaxi?", link: "#que-es-hipermaxi" },
       { name: "Alcance", link: "#alcance" },
+      { name: "Vision", link: "#vision" },
+      { name: "Mision", link: "#mision" },
+      {
+        name: "Pros y contras",
+        link: "#pros-contras",
+        data: [
+          { name: "Características Principales", link: "#caracteristicas" },
+          { name: "Análisis Detallado", link: "#analisis-detallado" },
+        ],
+      },
     ],
   },
   {

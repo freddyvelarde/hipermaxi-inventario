@@ -29,6 +29,12 @@ p {
   font-style: normal;
 }
 
+@media (max-width: 760px) {
+p{
+font-size: 1rem;
+}
+}
+
   a {
 color: inherit;
     text-decoration: none;
