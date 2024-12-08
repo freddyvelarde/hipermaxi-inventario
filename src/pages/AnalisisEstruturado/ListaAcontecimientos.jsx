@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import AnalisisEstructuradoStyled, {
   BreadcrumbNav,
 } from "./AnalisisEstructuradoStyled";
@@ -20,6 +21,16 @@ export const ListaAcontecimientos = () => {
         actualización del inventario, la venta de productos y la reposición de
         stock.
       </p>
+      <PageNavigation
+        leftPage={{
+          name: "Declaracion de propositos",
+          path: "/analisis-estructurado/declaracion_de_propositos",
+        }}
+        rightPage={{
+          name: "Diagrama de contexto",
+          path: "/analisis-estructurado/diagrama_de_contexto",
+        }}
+      />
     </AnalisisEstructuradoStyled>
   );
 };

@@ -4,19 +4,18 @@ import OrientadoAObjetosStyled from "./OrientadoAObjetosStyled"; // Importa el a
 // Importación de la imagen del diagrama
 import DiagramaOrientadoAObjetos from "../OrientadoAObjetos/assets/Diagrama-OrientadoAObjetos.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
+import { BreadcrumbNav } from "../AnalisisEstruturado/AnalisisEstructuradoStyled";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 const OrientadoAObjetos = () => {
   return (
     <OrientadoAObjetosStyled>
-      <h1>Orientado a Objetos</h1>
-
-      <h2>Diagrama Orientado a Objetos</h2>
-      <ZoomInImage
-        src={DiagramaOrientadoAObjetos}
-        alt="Diagrama Orientado a Objetos"
-        width="auto"
-        className="diagrama"
-      />
+      <BreadcrumbNav>
+        <ul>
+          <li>Orientado a Objetos</li>
+        </ul>
+      </BreadcrumbNav>
+      <h3>Diagrama Orientado a Objetos</h3>
 
       <p>
         En esta sección se presenta el diagrama orientado a objetos, el cual
@@ -32,6 +31,22 @@ const OrientadoAObjetos = () => {
         inventarios, permitiendo una mejor comprensión y desarrollo del
         software.
       </p>
+      <ZoomInImage
+        src={DiagramaOrientadoAObjetos}
+        alt="Diagrama Orientado a Objetos"
+        width="auto"
+        className="diagrama"
+      />
+      <PageNavigation
+        leftPage={{
+          name: "Analisis Estructurado",
+          path: "/analisis-estructurado/declaracion_de_propositos",
+        }}
+        rightPage={{
+          name: "Marco Teorico",
+          path: "/marco-teorico/intro",
+        }}
+      />
     </OrientadoAObjetosStyled>
   );
 };

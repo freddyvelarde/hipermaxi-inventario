@@ -1,12 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "./pages/Home/Home"; // Ya lo tienes
-import MarcoTeoricoPage from "./pages/MarcoTeorico/MarcoTeorico"; // Corregido el nombre
-import AnalisisEstructuradoPage from "./pages/AnalisisEstruturado/index"; // Nueva página
-import OrientadoAObjetosPage from "./pages/OrientadoAObjetos/index"; // Nueva página
+import Home from "./pages/Home/Home";
+import MarcoTeoricoPage from "./pages/MarcoTeorico/MarcoTeorico";
+import AnalisisEstructuradoPage from "./pages/AnalisisEstruturado/index";
+import OrientadoAObjetosPage from "./pages/OrientadoAObjetos/index";
 import DashboardLayout from "./sections/DashboardLayout/Navbar";
 import PageStyled from "./styles/PageStyled";
 import useMiniDashboardActive from "./hooks/MiniDashboardActive/useMiniDashboardActive";
-import HomeRedirect from "./components/HomeRedirect";
+import HomeRedirect, { Redirect } from "./components/HomeRedirect";
 import { DeclaracionPropositos } from "./pages/AnalisisEstruturado/DeclaracionPropositos";
 import { ListaAcontecimientos } from "./pages/AnalisisEstruturado/ListaAcontecimientos";
 import { DiagramaContexto } from "./pages/AnalisisEstruturado/DiagramaContexto";
@@ -45,6 +45,7 @@ const useRouter = () => {
           path: "analisis-estructurado",
           element: (
             <PageStyled state={dashboardLayoutActive}>
+              <Redirect />
               <AnalisisEstructuradoPage />
             </PageStyled>
           ),
@@ -72,6 +73,8 @@ const useRouter = () => {
           path: "/marco-teorico",
           element: (
             <PageStyled state={dashboardLayoutActive}>
+              <Redirect />
+              <AnalisisEstructuradoPage />
               <MarcoTeoricoPage />
             </PageStyled>
           ),

@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import AnalisisEstructuradoStyled, {
   BreadcrumbNav,
 } from "./AnalisisEstructuradoStyled";
@@ -20,6 +21,16 @@ export const DeclaracionPropositos = () => {
         actores externos e internos, así como los propósitos fundamentales del
         sistema.
       </p>
+      <PageNavigation
+        leftPage={{
+          name: "Inicio",
+          path: "/inicio",
+        }}
+        rightPage={{
+          name: "Lista de acontecimientos",
+          path: "/analisis-estructurado/lista_de_acontecimientos",
+        }}
+      />
     </AnalisisEstructuradoStyled>
   );
 };

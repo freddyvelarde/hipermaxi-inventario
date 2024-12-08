@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import MarcoTeoricoPageStyled, { BreadcrumbNav } from "./MarcoTeoricoStyled";
 
 export const Problema = () => {
@@ -17,6 +18,13 @@ export const Problema = () => {
           compra tanto en línea como en físico.
         </p>
       </section>
+      <PageNavigation
+        leftPage={{
+          name: "Modelo de Negocio",
+          path: "/marco-teorico/modelo_negocio",
+        }}
+        rightPage={null}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

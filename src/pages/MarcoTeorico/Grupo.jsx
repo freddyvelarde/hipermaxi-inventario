@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import MarcoTeoricoPageStyled, {
   BreadcrumbNav,
   TableStyled,
@@ -65,6 +66,13 @@ export const Grupo = () => {
           </tbody>
         </TableStyled>
       </section>
+      <PageNavigation
+        leftPage={{ name: "Antecedentes", path: "/marco-teorico/antecedentes" }}
+        rightPage={{
+          name: "Análisis FODA",
+          path: "/marco-teorico/analisis_foda",
+        }}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

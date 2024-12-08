@@ -98,14 +98,12 @@ const NoticeCard = ({ title, description, tag }) => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
-    // Check localStorage for the "neverShowAgain" flag
     const neverShowAgain =
       localStorage.getItem(`neverShowNoticeCard${title}`) === "true";
 
     if (!neverShowAgain) {
       setIsVisible(true);
       setIsAnimating(true);
-      // Hide the card after 5 seconds
       const timer = setTimeout(() => handleClose(), 5000);
       return () => clearTimeout(timer);
     }
@@ -118,7 +116,7 @@ const NoticeCard = ({ title, description, tag }) => {
 
   const handleClose = () => {
     setIsAnimating(false);
-    setTimeout(() => setIsVisible(false), 500); // Match the transition duration
+    setTimeout(() => setIsVisible(false), 500);
   };
 
   if (!isVisible) return null;

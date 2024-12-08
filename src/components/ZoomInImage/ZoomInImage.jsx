@@ -12,8 +12,6 @@ const FullscreenContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  // background-color: ${(props) => props.theme.overlay};
-  // opacity: 0.4;
   background-color: #171B21CC;
   display: flex;
   justify-content: center;
@@ -129,7 +127,7 @@ export const ZoomInImage = ({ src, alt, width = "50%" }) => {
     (direction) => {
       if (!imageRef.current || zoom <= 1) return;
 
-      const moveStep = 50; // reduced step for smoother movement
+      const moveStep = 50;
       const imageEl = imageRef.current;
       const containerWidth = fullscreenRef.current.clientWidth;
       const containerHeight = fullscreenRef.current.clientHeight;
@@ -161,30 +159,25 @@ export const ZoomInImage = ({ src, alt, width = "50%" }) => {
     (direction) => {
       if (zoom <= 1) return;
 
-      // Clear any existing interval
       if (moveIntervalRef.current) {
         clearInterval(moveIntervalRef.current);
       }
 
-      // Start new interval
       moveIntervalRef.current = setInterval(() => {
         moveImage(direction);
-      }, 50); // 50ms interval for smooth continuous movement
+      }, 50);
 
-      // Update active directions
       setActiveDirections((prev) => [...new Set([...prev, direction])]);
     },
     [moveImage, zoom],
   );
 
   const stopMoving = useCallback((direction) => {
-    // Clear the interval if it exists
     if (moveIntervalRef.current) {
       clearInterval(moveIntervalRef.current);
       moveIntervalRef.current = null;
     }
 
-    // Remove the direction from active directions
     setActiveDirections((prev) => prev.filter((d) => d !== direction));
   }, []);
 
@@ -202,7 +195,6 @@ export const ZoomInImage = ({ src, alt, width = "50%" }) => {
         resetImageState();
       }
 
-      // Arrow key navigation
       if (isFullscreen && zoom > 1) {
         switch (e.key) {
           case "ArrowUp":
@@ -267,7 +259,6 @@ export const ZoomInImage = ({ src, alt, width = "50%" }) => {
     };
   }, [isFullscreen, handleWheel, handleKeyDown, handleKeyUp]);
 
-  // Cleanup interval on unmount
   useEffect(() => {
     return () => {
       if (moveIntervalRef.current) {
@@ -338,4 +329,3 @@ export const ZoomInImage = ({ src, alt, width = "50%" }) => {
   );
 };
 
-// Export color themes for external use

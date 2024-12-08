@@ -1,4 +1,5 @@
 import MarcoTeoricoPageStyled, { BreadcrumbNav } from "./MarcoTeoricoStyled";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const Intro = () => {
   return (
@@ -16,6 +17,17 @@ export const Intro = () => {
         administración de productos, agilizar la toma de decisiones y garantizar
         la disponibilidad de mercancías en función de la demanda.
       </p>
+
+      <PageNavigation
+        leftPage={{
+          name: "Diccionario de Datos",
+          path: "/analisis-estructurado/diccionario_datos",
+        }}
+        rightPage={{
+          name: "Antecedentes",
+          path: "/marco-teorico/antecedentes",
+        }}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

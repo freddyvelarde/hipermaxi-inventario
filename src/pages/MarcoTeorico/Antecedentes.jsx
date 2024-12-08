@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import MarcoTeoricoPageStyled, { BreadcrumbNav } from "./MarcoTeoricoStyled";
 
 export const Antecedentes = () => {
@@ -16,6 +17,13 @@ export const Antecedentes = () => {
         varias ciudades y un modelo de negocio diversificado, la empresa se ha
         consolidado como líder en el mercado de supermercados.
       </p>
+      <PageNavigation
+        leftPage={{ name: "Introducción", path: "/marco-teorico/intro" }}
+        rightPage={{
+          name: "Grupo de Interés",
+          path: "/marco-teorico/grupo_intereses",
+        }}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

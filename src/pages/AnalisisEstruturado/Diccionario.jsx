@@ -4,6 +4,7 @@ import AnalisisEstructuradoStyled, {
 import dic1 from "../AnalisisEstruturado/assets/dic1.png";
 import dic2 from "../AnalisisEstruturado/assets/dic2.png";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const Diccionario = () => {
   return (
@@ -32,6 +33,16 @@ export const Diccionario = () => {
         alt="Diagrama ER"
         width="auto"
         className="diagrama"
+      />
+      <PageNavigation
+        leftPage={{
+          name: "Diagrama DEER",
+          path: "/analisis-estructurado/diagrama_deer",
+        }}
+        rightPage={{
+          name: "Orientado a Objetos",
+          path: "/orientado-objetos",
+        }}
       />
     </AnalisisEstructuradoStyled>
   );

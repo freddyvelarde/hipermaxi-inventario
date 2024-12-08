@@ -3,6 +3,7 @@ import AnalisisEstructuradoStyled, {
 } from "./AnalisisEstructuradoStyled";
 import diagramaERImg from "../AnalisisEstruturado/assets/Diagrama-ER.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const Deer = () => {
   return (
@@ -20,6 +21,16 @@ export const Deer = () => {
         alt="Diagrama ER"
         width="auto"
         className="diagrama"
+      />
+      <PageNavigation
+        leftPage={{
+          name: "Diagrama de Flujo de Datos",
+          path: "/analisis-estructurado/diagrama_flujo_datos",
+        }}
+        rightPage={{
+          name: "Diccionario de Datos",
+          path: "/analisis-estructurado/diccionario_datos",
+        }}
       />
     </AnalisisEstructuradoStyled>
   );

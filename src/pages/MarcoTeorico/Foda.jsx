@@ -1,5 +1,6 @@
 import { BreadcrumbNav } from "../AnalisisEstruturado/AnalisisEstructuradoStyled";
 import MarcoTeoricoPageStyled, { TableStyled } from "./MarcoTeoricoStyled";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const Foda = () => {
   return (
@@ -72,6 +73,16 @@ export const Foda = () => {
           </tbody>
         </TableStyled>
       </section>
+      <PageNavigation
+        leftPage={{
+          name: "Grupo de Interés",
+          path: "/marco-teorico/grupo_intereses",
+        }}
+        rightPage={{
+          name: "Modelo de Negocio",
+          path: "/marco-teorico/modelo_negocio",
+        }}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

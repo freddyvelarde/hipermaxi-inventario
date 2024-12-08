@@ -4,6 +4,7 @@ import AnalisisEstructuradoStyled, {
 import diagramaContextoImg from "../AnalisisEstruturado/assets/Diagrama-Contexto.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
 import NoticeCard from "../../components/Notice/Notice";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const DiagramaContexto = () => {
   return (
@@ -28,6 +29,16 @@ export const DiagramaContexto = () => {
           alt="Diagrama de Contexto"
           width="auto"
           className="diagrama"
+        />
+        <PageNavigation
+          leftPage={{
+            name: "Lista de Acontecimientos",
+            path: "/analisis-estructurado/lista_de_acontecimientos",
+          }}
+          rightPage={{
+            name: "Diagrama de Flujo de Datos",
+            path: "/analisis-estructurado/diagrama_flujo_datos",
+          }}
         />
       </AnalisisEstructuradoStyled>
     </>

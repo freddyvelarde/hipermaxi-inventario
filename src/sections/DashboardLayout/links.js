@@ -40,7 +40,7 @@ export const links = [
     data: [
       {
         name: "Modelo Ambiental",
-        link: "/",
+        link: "declaracion_de_propositos",
         data: [
           {
             name: "Declaración de propósitos",
@@ -59,7 +59,7 @@ export const links = [
 
       {
         name: "modelo de comportamiento",
-        link: "",
+        link: "diagrama_flujo_datos",
         data: [
           {
             name: "Diagrama de flujo de datos",

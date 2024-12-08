@@ -1,3 +1,4 @@
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import MarcoTeoricoPageStyled, {
   BreadcrumbNav,
   TableStyled,
@@ -60,6 +61,16 @@ export const ModeloNegocio = () => {
           </tbody>
         </TableStyled>
       </section>
+      <PageNavigation
+        leftPage={{
+          name: "Análisis FODA",
+          path: "/marco-teorico/analisis_foda",
+        }}
+        rightPage={{
+          name: "Planteamiento del Problema",
+          path: "/marco-teorico/planteamiento_del_problema",
+        }}
+      />
     </MarcoTeoricoPageStyled>
   );
 };

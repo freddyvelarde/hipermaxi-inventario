@@ -3,6 +3,7 @@ import AnalisisEstructuradoStyled, {
 } from "./AnalisisEstructuradoStyled";
 import diagramaFlujoDatosImg from "../AnalisisEstruturado/assets/Diagrama-FlujoDeDatos.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
+import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
 export const FlujoDatos = () => {
   return (
@@ -20,6 +21,16 @@ export const FlujoDatos = () => {
         alt="Diagrama de Flujo de Datos"
         width="auto"
         className="diagrama"
+      />
+      <PageNavigation
+        leftPage={{
+          name: "Diagrama de Contexto",
+          path: "/analisis-estructurado/diagrama_de_contexto",
+        }}
+        rightPage={{
+          name: "Diagrama DEER",
+          path: "/analisis-estructurado/diagrama_deer",
+        }}
       />
     </AnalisisEstructuradoStyled>
   );
