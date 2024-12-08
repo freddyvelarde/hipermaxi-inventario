@@ -1,54 +1,5 @@
 import styled from "styled-components";
 
-export const TableStyled = styled.table`
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin: 2rem 0;
-  background: ${(props) => props.theme.overlay};
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  th,
-  td {
-    padding: 1rem;
-    text-align: left;
-    border-bottom: 1px solid ${(props) => props.theme.overlay};
-  }
-
-  th {
-    background: ${(props) => props.theme.primaryButton};
-    color: ${(props) => props.theme.textHeading};
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  tr:last-child td {
-    border-bottom: none;
-  }
-
-  tbody tr:nth-child(even) {
-    background: ${(props) => props.theme.overlay};
-  }
-
-  tbody tr:hover {
-    background: ${(props) => props.theme.background};
-    color: ${(props) => props.theme.textHeading};
-    transition: all 0.3s ease;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-
-    th,
-    td {
-      padding: 0.75rem;
-    }
-  }
-`;
-
 export const PageContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -98,8 +49,7 @@ export const SectionHeader = styled.div`
     margin-right: 0.5rem;
   }
 `;
-
-const MarcoTeoricoPageStyled = styled.div`
+export const AnalisisEstructuradoStyled = styled.div`
   padding: 2rem;
   background: ${(props) => props.theme.background};
   min-height: 100vh;
@@ -155,11 +105,11 @@ const MarcoTeoricoPageStyled = styled.div`
   }
 `;
 
-export default MarcoTeoricoPageStyled;
-//
+export default AnalisisEstructuradoStyled;
+
 // import styled from "styled-components";
 //
-// const MarcoTeoricoPageStyled = styled.div`
+// const AnalisisEstructuradoStyled = styled.div`
 //   padding: 30px;
 //   background-color: ${(props) => props.theme.background};
 //   color: ${(props) => props.theme.textBody};
@@ -168,12 +118,12 @@ export default MarcoTeoricoPageStyled;
 //   margin: 0 auto;
 //   line-height: 1.8;
 //
-//   .title {
-//     font-size: 3rem;
+//   h1 {
+//     font-size: 2rem;
 //     font-weight: bold;
 //     color: ${(props) => props.theme.textHeading};
 //     text-align: center;
-//     margin-bottom: 30px;
+//     margin-bottom: 40px;
 //   }
 //
 //   section {
@@ -181,17 +131,54 @@ export default MarcoTeoricoPageStyled;
 //   }
 //
 //   h2 {
-//     font-size: 2rem;
+//     font-size: 1.8rem;
 //     color: ${(props) => props.theme.highlight};
-//     margin-bottom: 15px;
+//     margin-bottom: 20px;
+//   }
+//
+//   h3 {
+//     font-size: 1.5rem;
+//     color: ${(props) => props.theme.primaryButton};
+//     margin-top: 20px;
+//     margin-bottom: 10px;
 //   }
 //
 //   p {
-//     font-size: 1.2rem;
-//     margin-bottom: 15px;
+//     font-size: 1.1rem;
 //     color: ${(props) => props.theme.textBody};
+//     margin-bottom: 15px;
 //   }
 //
+//   img.diagrama {
+//     max-width: 100%;
+//     height: auto;
+//     border-radius: 8px;
+//     margin: 20px 0;
+//     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+//   }
+//
+//   /* Alternate section background colors */
+//   section:nth-of-type(odd) {
+//     background-color: ${(props) => props.theme.surface};
+//     padding: 20px;
+//     border-radius: 10px;
+//   }
+//
+//   section:nth-of-type(even) {
+//     background-color: ${(props) => props.theme.overlay};
+//     padding: 20px;
+//     border-radius: 10px;
+//   }
+//
+//   /* Border styling for headers */
+//   h2,
+//   h3 {
+//     border-bottom: 2px solid ${(props) => props.theme.accent};
+//     padding-bottom: 5px;
+//     margin-bottom: 15px;
+//   }
+//
+//   /* Styling for unordered lists */
 //   ul {
 //     padding-left: 20px;
 //   }
@@ -199,52 +186,11 @@ export default MarcoTeoricoPageStyled;
 //   ul li {
 //     font-size: 1.1rem;
 //     margin-bottom: 10px;
-//     color: ${(props) => props.theme.textBody};
 //   }
 //
-//   table {
-//     width: 100%;
-//     margin-top: 20px;
-//     border-collapse: collapse;
-//     background-color: ${(props) => props.theme.surface};
-//     border-radius: 8px;
-//     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-//   }
-//
-//   th,
-//   td {
-//     padding: 15px;
-//     text-align: left;
-//     border: 1px solid ${(props) => props.theme.overlay};
-//   }
-//
-//   th {
-//     background-color: ${(props) => props.theme.primaryButton};
-//     color: ${(props) => props.theme.textHeading};
-//     font-size: 1.1rem;
-//   }
-//
-//   tr:nth-child(even) {
-//     background-color: ${(props) => props.theme.overlay};
-//   }
-//
-//   tr:hover {
-//     background-color: ${(props) => props.theme.surface};
-//   }
-//
-//   table td {
-//     font-size: 1rem;
-//     color: ${(props) => props.theme.textBody};
-//   }
-//
-//   /* Add some padding for the rows */
-//   tbody tr {
-//     transition: background-color 0.3s ease;
-//   }
-//
-//   tbody tr:hover {
-//     background-color: ${(props) => props.theme.surface};
+//   ul li strong {
+//     color: ${(props) => props.theme.primaryButton};
 //   }
 // `;
 //
-// export default MarcoTeoricoPageStyled;
+// export default AnalisisEstructuradoStyled;
