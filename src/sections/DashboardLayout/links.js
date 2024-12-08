@@ -40,38 +40,38 @@ export const links = [
     data: [
       {
         name: "Modelo Ambiental",
-        link: "#modelo_ambiental",
+        link: "/",
         data: [
           {
             name: "Declaración de propósitos",
-            link: "#declaracion_de_propositos",
+            link: "declaracion_de_propositos",
           },
           {
             name: "Lista de acontecimientos",
-            link: "#lista_de_acontecimientos",
+            link: "lista_de_acontecimientos",
           },
           {
             name: "Diagrama de contexto",
-            link: "#diagrama_de_contexto",
+            link: "diagrama_de_contexto",
           },
         ],
       },
 
       {
         name: "modelo de comportamiento",
-        link: "#modelo_comportamiento",
+        link: "",
         data: [
           {
             name: "Diagrama de flujo de datos",
-            link: "#diagrama_flujo_datos",
+            link: "diagrama_flujo_datos",
           },
           {
             name: "Diagrama DEER",
-            link: "#diagrama_deer",
+            link: "diagrama_deer",
           },
           {
             name: "Diccionario de datos",
-            link: "#diccionario_datos",
+            link: "diccionario_datos",
           },
         ],
       },
@@ -106,33 +106,24 @@ export const links = [
     link: "marco-teorico",
     icons: { dark: documentDark, light: documentLight },
     id: "marco",
-    // data: [
-    //   {
-    //     name: "sub-menu1",
-    //     link: "#submenu1",
-    //     data: [
-    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-    //     ],
-    //   },
-    //   { name: "sub-menu2", link: "#submenu2" },
-    // ],
+    data: [
+      { name: "Introduccion", link: "intro" },
+
+      { name: "Antecedentes", link: "antecedentes" },
+
+      { name: "Grupo de interes", link: "grupo_intereses" },
+
+      { name: "Analisis FODA", link: "analisis_foda" },
+
+      { name: "Modelo de negocio", link: "modelo_negocio" },
+
+      { name: "Planteamiento de Problema", link: "planteamiento_del_problema" },
+    ],
   },
   {
     title: "Video",
     link: "video",
     icons: { dark: videoDark, light: videoLight },
     id: "video",
-    // data: [
-    //   {
-    //     name: "sub-menu1",
-    //     link: "#submenu1",
-    //     data: [
-    //       { name: "sub-sub-menu1", link: "#sub-sub-menu1" },
-    //       { name: "sub-sub-menu2", link: "#sub-sub-menu2" },
-    //     ],
-    //   },
-    //   { name: "sub-menu2", link: "#submenu2" },
-    // ],
   },
 ];

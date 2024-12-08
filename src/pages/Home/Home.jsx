@@ -19,14 +19,20 @@ import { Link } from "react-router-dom";
 import React from "react";
 import Card from "../../components/Card";
 import InventoryComparison from "../../components/ComparisoTable";
+import NoticeCard from "../../components/Notice/Notice";
 
 const Home = () => {
   // const images = [inv1, inv2, inv3, inv4];
 
   return (
     <HomeContainer>
+      <NoticeCard
+        title="Nueva funcionalidad"
+        description="Haz click y luego scroll sobre los diagramas para ampliarlos."
+        tag="Imagenes"
+      />
       <Header>
-        <Title>Análisis y Diseño de Sistemas de Inventario</Title>
+        <Title>Sistemas y Gestion de Inventario</Title>
         <Subtitle>
           Hipermaxi, el supermercado de Bolivia que transforma tu experiencia de
           compra con calidad, variedad y confianza en cada pasillo.
@@ -115,7 +121,7 @@ const Home = () => {
       <InventoryComparison />
       <div className="cards">
         <Card
-          title="Análisis Estructurado"
+          title="Anális Estructurado"
           desc="El análisis estructurado es una metodología que descompone el sistema en componentes más pequeños y manejables, permitiendo entender y documentar cada proceso en detalle. Este enfoque utiliza herramientas como diagramas de flujo y diagramas de contexto para representar gráficamente la funcionalidad del sistema."
           link="/analisis-estructurado"
           linkDesc="Explora más del análisis estructurado"
