@@ -61,8 +61,8 @@ const Tag = styled.span`
 `;
 
 const Button = styled.button`
-  background-color: ${(props) => props.theme.primaryButton};
-  color: ${(props) => props.theme.textHeading};
+  background-color: ${(props) => props.theme.accent};
+  color: ${(props) => props.theme.background};
   border: none;
   border-radius: 8px;
   font-size: 14px;
@@ -73,7 +73,7 @@ const Button = styled.button`
   margin-right: 8px;
 
   &:hover {
-    background-color: ${(props) => props.theme.secondaryButton};
+    background-color: ${(props) => props.theme.error};
   }
 `;
 

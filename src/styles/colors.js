@@ -18,7 +18,7 @@ export const darkColors = {
 };
 export const lightColors = {
   // surface: "#f4f4f5",
-  surface: "#5A95FF",
+  surface: "#eebebe",
   background: "#fff",
   overlay: "#e8ebeb",
   primaryButton: "#FA9332",

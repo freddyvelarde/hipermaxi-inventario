@@ -10,8 +10,8 @@ export const DiagramaContexto = () => {
   return (
     <>
       <NoticeCard
-        title="Cerrar Imagenes"
-        description="Presiona ESC para cerrar las imagenes."
+        title="Cerrar Diagramas"
+        description="Presiona ESC para cerrar los diagramas."
         tag="IMAGENES"
       />
       <AnalisisEstructuradoStyled>
