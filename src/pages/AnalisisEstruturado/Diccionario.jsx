@@ -1,8 +1,9 @@
 import AnalisisEstructuradoStyled, {
   BreadcrumbNav,
 } from "./AnalisisEstructuradoStyled";
-import dic1 from "../AnalisisEstruturado/assets/dic1.png";
-import dic2 from "../AnalisisEstruturado/assets/dic2.png";
+// import dic1 from "../AnalisisEstruturado/assets/dic1.png";
+// import dic2 from "../AnalisisEstruturado/assets/dic2.png";
+import dictionario from "../AnalisisEstruturado/assets/dicdatosv1.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
 import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
@@ -22,14 +23,9 @@ export const Diccionario = () => {
         utilizados en el sistema, como los productos, categorías, fechas de
         entrada y salida, y las cantidades disponibles.
       </p>
+      <br />
       <ZoomInImage
-        src={dic1}
-        alt="Diagrama ER"
-        width="auto"
-        className="diagrama"
-      />
-      <ZoomInImage
-        src={dic2}
+        src={dictionario}
         alt="Diagrama ER"
         width="auto"
         className="diagrama"
