@@ -19,6 +19,8 @@ import { Grupo } from "./pages/MarcoTeorico/Grupo";
 import { Foda } from "./pages/MarcoTeorico/Foda";
 import { ModeloNegocio } from "./pages/MarcoTeorico/ModeloNegocio";
 import { Problema } from "./pages/MarcoTeorico/Problema";
+import { Vision } from "./pages/MarcoTeorico/Vision";
+import { Mision } from "./pages/MarcoTeorico/Mision";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -183,6 +185,22 @@ const useRouter = () => {
           element: (
             <PageStyled state={dashboardLayoutActive}>
               <Problema />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/marco-teorico/vision",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <Vision />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/marco-teorico/mision",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <Mision />
             </PageStyled>
           ),
         },

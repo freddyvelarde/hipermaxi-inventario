@@ -80,44 +80,6 @@ const Home = () => {
         </BannerContainer>
       </BodyContainer>
 
-      <BodyContainer id="mision">
-        <TextSection>
-          <h1>Misión del Proyecto</h1>
-          <p>
-            Desarrollar un sistema de inventario eficiente y confiable que
-            optimice la gestión de productos en la cadena de supermercados
-            Hipermaxi.{" "}
-          </p>
-          <p>
-            Este sistema buscará apoyar la misión de la empresa de liderar el
-            mercado de retail en Bolivia, mejorando la calidad del servicio a
-            través de procesos automatizados, reducción de errores operativos y
-            una administración ágil de los recursos.
-          </p>
-        </TextSection>
-        <BannerContainer>
-          <img src={inv2} alt="Vista del sistema de inventario en desarrollo" />
-        </BannerContainer>
-      </BodyContainer>
-      <BodyContainer id="vision">
-        <TextSection>
-          <h1>Visión del Proyecto</h1>
-          <p>
-            Convertirse en un referente tecnológico en la gestión de inventarios
-            para cadenas de supermercados, alineándose con la visión de
-            expansión y liderazgo de Hipermaxi.
-          </p>
-          <p>
-            Este sistema será una herramienta estratégica que no solo modernice
-            la administración de inventarios, sino que también impulse la
-            innovación y contribuya al crecimiento sostenible de la empresa en
-            el competitivo mercado del retail boliviano.
-          </p>
-        </TextSection>
-        <BannerContainer>
-          <img src={inv3} alt="Vista del sistema de inventario en desarrollo" />
-        </BannerContainer>
-      </BodyContainer>
       <InventoryComparison />
       <div className="cards">
         <Card

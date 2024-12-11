@@ -10,20 +10,21 @@ export const Problema = () => {
           <li>Planteamiento del problema</li>
         </ul>
       </BreadcrumbNav>
-      <section>
-        <h2 id="plante">1.3 Planteamiento del Problema</h2>
-        <p>
-          Los clientes de Hipermaxi enfrentan dificultades para encontrar
-          productos específicos en la tienda, lo que afecta la experiencia de
-          compra tanto en línea como en físico.
-        </p>
-      </section>
+      <h3 id="plante">1.6 Planteamiento del Problema</h3>
+      <p>
+        Los clientes de Hipermaxi enfrentan dificultades para encontrar
+        productos específicos en la tienda, lo que afecta la experiencia de
+        compra tanto en línea como en físico.
+      </p>
       <PageNavigation
         leftPage={{
           name: "Modelo de Negocio",
           path: "/marco-teorico/modelo_negocio",
         }}
-        rightPage={null}
+        rightPage={{
+          name: "Mision",
+          path: "/marco-teorico/mision",
+        }}
       />
     </MarcoTeoricoPageStyled>
   );

@@ -14,7 +14,7 @@ export const Grupo = () => {
             <li>Grupo de Interés</li>
           </ul>
         </BreadcrumbNav>
-        <h2 id="grupo">1.2.4 Grupos de Interés</h2>
+        <h3 id="grupo">1.3 Grupos de Interés</h3>
         <p>
           Hipermaxi gestiona diferentes grupos de interés, tanto internos como
           externos, asegurando relaciones duraderas con empleados, proveedores,

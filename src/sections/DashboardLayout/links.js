@@ -118,6 +118,8 @@ export const links = [
       { name: "Modelo de negocio", link: "modelo_negocio" },
 
       { name: "Planteamiento de Problema", link: "planteamiento_del_problema" },
+      { name: "Mision", link: "mision" },
+      { name: "Vision", link: "vision" },
     ],
   },
   {
