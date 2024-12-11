@@ -1,7 +1,8 @@
 import AnalisisEstructuradoStyled, {
   BreadcrumbNav,
 } from "./AnalisisEstructuradoStyled";
-import diagramaERImg from "../AnalisisEstruturado/assets/Diagrama-ER.jpg";
+import diagramaERImg from "../AnalisisEstruturado/assets/DEER.jpg";
+// import diagramaERImg from "../AnalisisEstruturado/assets/Diagrama-ER.jpg";
 import { ZoomInImage } from "../../components/ZoomInImage/ZoomInImage";
 import PageNavigation from "../../components/PageNavigation/PageNavigation";
 
