@@ -27,6 +27,7 @@ import { AnalisisEstructuradoTeorico } from "./pages/MarcoTeorico/AnalisisEstruc
 import { CasosUsoSistemas } from "./pages/CasosDeUso/CasosDeUsoDeSistemas";
 import { CasosUso } from "./pages/CasosDeUso/CasosDeUso";
 import { CasosUsoNegocio } from "./pages/CasosDeUso/CasosUsosNegocio";
+import { Encuestas } from "./pages/MarcoTeorico/Encuentas";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -247,6 +248,14 @@ const useRouter = () => {
           element: (
             <PageStyled state={dashboardLayoutActive}>
               <Mision />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/marco-teorico/encuestas",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <Encuestas />
             </PageStyled>
           ),
         },

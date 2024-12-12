@@ -24,7 +24,10 @@ export const Vision = () => {
       </p>
       <PageNavigation
         leftPage={{ name: "Mision", path: "/marco-teorico/mision" }}
-        rightPage={null}
+        rightPage={{
+          name: "encuestas",
+          path: "/marco-teorico/encuestas",
+        }}
       />
     </MarcoTeoricoPageStyled>
   );

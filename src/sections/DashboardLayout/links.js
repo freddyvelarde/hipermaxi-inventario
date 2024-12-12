@@ -139,6 +139,7 @@ export const links = [
       { name: "Planteamiento de Problema", link: "planteamiento_del_problema" },
       { name: "Mision", link: "mision" },
       { name: "Vision", link: "vision" },
+      { name: "Resultado de encuestas", link: "encuestas" },
     ],
   },
   {
