@@ -21,6 +21,9 @@ import { ModeloNegocio } from "./pages/MarcoTeorico/ModeloNegocio";
 import { Problema } from "./pages/MarcoTeorico/Problema";
 import { Vision } from "./pages/MarcoTeorico/Vision";
 import { Mision } from "./pages/MarcoTeorico/Mision";
+import { Generalidades } from "./pages/MarcoTeorico/Generalidades";
+import AnalisisEstructurado from "./pages/AnalisisEstruturado/index";
+import { AnalisisEstructuradoTeorico } from "./pages/MarcoTeorico/AnalisisEstructurado";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -193,6 +196,22 @@ const useRouter = () => {
           element: (
             <PageStyled state={dashboardLayoutActive}>
               <Vision />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/marco-teorico/generalidades",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <Generalidades />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/marco-teorico/analisis-estructurado-teorico",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <AnalisisEstructuradoTeorico />
             </PageStyled>
           ),
         },

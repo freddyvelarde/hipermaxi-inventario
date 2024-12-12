@@ -108,6 +108,8 @@ export const links = [
     id: "marco",
     data: [
       { name: "Introduccion", link: "intro" },
+      { name: "Generalidades", link: "generalidades" },
+      { name: "Analisis Estructurado", link: "analisis-estructurado-teorico" },
 
       { name: "Antecedentes", link: "antecedentes" },
 

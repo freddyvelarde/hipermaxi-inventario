@@ -24,8 +24,8 @@ export const Intro = () => {
           path: "/analisis-estructurado/diccionario_datos",
         }}
         rightPage={{
-          name: "Antecedentes",
-          path: "/marco-teorico/antecedentes",
+          name: "Generalidades",
+          path: "/marco-teorico/generalidades",
         }}
       />
     </MarcoTeoricoPageStyled>
