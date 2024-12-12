@@ -7,7 +7,7 @@ export const Generalidades = () => {
       <BreadcrumbNav>
         <ul>
           <li>Marco Teorico</li>
-          <li>Generalidade</li>
+          <li>Generalidades</li>
         </ul>
       </BreadcrumbNav>
       <h3 id="intro">1.1 Generalidades</h3>

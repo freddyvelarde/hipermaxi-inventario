@@ -7,7 +7,7 @@ export const AnalisisEstructuradoTeorico = () => {
       <BreadcrumbNav>
         <ul>
           <li>Marco Teorico</li>
-          <li>Generalidade</li>
+          <li>Análisis y Diseño Estructurado</li>
         </ul>
       </BreadcrumbNav>
       <h3 id="intro">1.1 Análisis y Diseño Estructurado</h3>
@@ -26,12 +26,12 @@ export const AnalisisEstructuradoTeorico = () => {
 
       <PageNavigation
         leftPage={{
-          name: "Diccionario de Datos",
-          path: "/analisis-estructurado/diccionario_datos",
+          name: "Generalidades",
+          path: "/marco-teorico/generalidades",
         }}
         rightPage={{
-          name: "introdu",
-          path: "/marco-teorico/generalidades",
+          name: "Antecedentes",
+          path: "/marco-teorico/antecedentes",
         }}
       />
     </MarcoTeoricoPageStyled>
