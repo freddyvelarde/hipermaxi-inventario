@@ -24,6 +24,9 @@ import { Mision } from "./pages/MarcoTeorico/Mision";
 import { Generalidades } from "./pages/MarcoTeorico/Generalidades";
 import AnalisisEstructurado from "./pages/AnalisisEstruturado/index";
 import { AnalisisEstructuradoTeorico } from "./pages/MarcoTeorico/AnalisisEstructurado";
+import { CasosUsoSistemas } from "./pages/CasosDeUso/CasosDeUsoDeSistemas";
+import { CasosUso } from "./pages/CasosDeUso/CasosDeUso";
+import { CasosUsoNegocio } from "./pages/CasosDeUso/CasosUsosNegocio";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -93,6 +96,30 @@ const useRouter = () => {
           ),
         },
 
+        {
+          path: "/casos-uso",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <CasosUso />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/casos-uso/sistemas",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <CasosUsoSistemas />
+            </PageStyled>
+          ),
+        },
+        {
+          path: "/casos-uso/negocio",
+          element: (
+            <PageStyled state={dashboardLayoutActive}>
+              <CasosUsoNegocio />
+            </PageStyled>
+          ),
+        },
         // childs of analisis estrucutrado
         {
           path: "/analisis-estructurado/declaracion_de_propositos",

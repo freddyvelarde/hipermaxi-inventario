@@ -8,6 +8,8 @@ import videoDark from "./assets/video_dark.svg";
 import videoLight from "./assets/video_light.svg";
 import documentLight from "./assets/documentLight.svg";
 import documentDark from "./assets/documentDark.svg";
+import casosUsoLight from "../../pages/CasosDeUso/assets/casos_uso_light.svg";
+import casosUsoDark from "../../pages/CasosDeUso/assets/casos_uso_dark.svg";
 export const links = [
   {
     title: "Inicio",
@@ -29,6 +31,8 @@ export const links = [
       },
     ],
   },
+  //
+  //
   {
     title: "Analisis Estructurado",
     link: "analisis-estructurado",
@@ -100,6 +104,19 @@ export const links = [
     //     ],
     //   },
     // ],
+  },
+  {
+    title: "Casos De Uso",
+    link: "casos-uso",
+    icons: { dark: casosUsoDark, light: casosUsoLight },
+    id: "casos-uso",
+    data: [
+      { name: "Casos de uso de negocio", link: "negocio" },
+      { name: "Casos de uso de sistemas", link: "sistemas" },
+      // { name: "Alcance", link: "#alcance" },
+      // { name: "Mision", link: "#mision" },
+      // { name: "Vision", link: "#vision" },
+    ],
   },
   {
     title: "Marco Teorico",
