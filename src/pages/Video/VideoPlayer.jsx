@@ -39,14 +39,11 @@ const StyledIframe = styled.iframe`
   border: none;
 `;
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ driveSrc }) => {
   return (
     <VideoPlayerContainer>
       <FrameWrapper>
-        <StyledIframe
-          src="https://drive.google.com/file/d/1wYO0O1NbUn4S8PPmtWGMBET5AvyNFu3d/preview"
-          allow="autoplay"
-        ></StyledIframe>
+        <StyledIframe src={driveSrc} allow="autoplay"></StyledIframe>
       </FrameWrapper>
     </VideoPlayerContainer>
   );
