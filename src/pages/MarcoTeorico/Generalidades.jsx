@@ -10,7 +10,7 @@ export const Generalidades = () => {
           <li>Generalidades</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="intro">1.1 Generalidades</h3>
+      <h3 id="intro">1.2 Generalidades</h3>
       <p>
         Esta sección establece las bases del estudio. Se introduce el tema
         central y se contextualiza dentro de la empresa en cuestión. Se presenta

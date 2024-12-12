@@ -10,7 +10,7 @@ export const Antecedentes = () => {
           <li>Antecedentes</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="ante">1.2 Antecedentes</h3>
+      <h3 id="ante">1.4 Antecedentes</h3>
       <p>
         Hipermaxi S.A. inició operaciones en 1994 y, desde entonces, ha
         experimentado una expansión significativa en Bolivia. Con sucursales en

@@ -10,7 +10,7 @@ export const Mision = () => {
           <li>Mision</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="ante">1.7 Mision</h3>
+      <h3 id="ante">1.9 Mision</h3>
       <p>
         Desarrollar un sistema de inventario eficiente y confiable que optimice
         la gestión de productos en la cadena de supermercados Hipermaxi.{" "}

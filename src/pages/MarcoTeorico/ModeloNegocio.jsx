@@ -14,7 +14,7 @@ export const ModeloNegocio = () => {
             <li>Modelo de negocio</li>
           </ul>
         </BreadcrumbNav>
-        <h3 id="negocio">1.5 Modelo de Negocio</h3>
+        <h3 id="negocio">1.7 Modelo de Negocio</h3>
         <p>
           El modelo de negocio de Hipermaxi incluye una propuesta de valor
           basada en calidad y precios competitivos, y se enfoca en segmentos de

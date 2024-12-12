@@ -10,7 +10,7 @@ export const Problema = () => {
           <li>Planteamiento del problema</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="plante">1.6 Planteamiento del Problema</h3>
+      <h3 id="plante">1.8 Planteamiento del Problema</h3>
       <p>
         Los clientes de Hipermaxi enfrentan dificultades para encontrar
         productos específicos en la tienda, lo que afecta la experiencia de

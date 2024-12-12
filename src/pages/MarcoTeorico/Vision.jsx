@@ -10,7 +10,7 @@ export const Vision = () => {
           <li>Vision</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="ante">1.8 Vision</h3>
+      <h3 id="ante">1.10 Vision</h3>
       <p>
         Convertirse en un referente tecnológico en la gestión de inventarios
         para cadenas de supermercados, alineándose con la visión de expansión y

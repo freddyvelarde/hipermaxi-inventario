@@ -28,187 +28,195 @@ export const Encuestas = () => {
           <li>Resultado de Encuestas</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="intro">1.1 Resultado de Encuestas</h3>
+      <h3 id="intro">1.10 Resultado de Encuestas</h3>
+
       <p>
-        Gráfica de encuesta a clientes(Género). (elaborado por el grupo de
-        investigación, 2024).
+        La gráfica muestra la distribución de género entre los clientes que
+        visitan el supermercado Hipermaxi.
       </p>
       <ZoomInImage
         src={genero}
-        alt="Orientado a objets"
+        alt="Distribución de género"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Frecuencia de visita al supermercado
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        La siguiente gráfica presenta la frecuencia con la que los clientes
+        visitan el supermercado, identificando los hábitos de compra.
       </p>
       <ZoomInImage
         src={frecuencia}
-        alt="Orientado a objets"
+        alt="Frecuencia de visita"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Sucursal más concurrida). (elaborado por
-        el grupo de investigación, 2024).
+        Aquí se observa cuál es la sucursal más concurrida por los clientes, lo
+        que permite analizar la demanda en diferentes ubicaciones.
       </p>
       <ZoomInImage
         src={concurrida}
-        alt="Orientado a objets"
+        alt="Sucursal más concurrida"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Dificultad de búsqueda de productos).
-        (elaborado por el grupo de investigación, 2024).
+        Este gráfico muestra la dificultad que los clientes enfrentan al buscar
+        productos en el supermercado.
       </p>
       <ZoomInImage
         src={dificultad}
-        alt="Orientado a objets"
+        alt="Dificultad de búsqueda de productos"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Tiempo de búsqueda de productos).
-        (elaborado por el grupo de investigación, 2024)
+        Se presenta el tiempo que los clientes tardan en encontrar productos
+        dentro del supermercado.
       </p>
       <ZoomInImage
         src={tiempo}
-        alt="Orientado a objets"
+        alt="Tiempo de búsqueda de productos"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Productos agotados). (elaborado por el
-        grupo de investigación, 2024).
+        La gráfica refleja la frecuencia con la que los clientes encuentran
+        productos agotados durante sus compras.
       </p>
       <ZoomInImage
         src={agotados}
-        alt="Orientado a objets"
+        alt="Productos agotados"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Eficiencia de los filtros de búsqueda de
-        productos actuales ). (elaborado por el grupo de investigación, 2024)
+        Se analiza la eficiencia de los filtros de búsqueda actuales para
+        encontrar productos en el sistema.
       </p>
       <ZoomInImage
         src={eficiencia}
-        alt="Orientado a objets"
+        alt="Eficiencia de los filtros de búsqueda"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Este gráfico presenta los principales problemas identificados con el
+        sistema actual de Hipermaxi.
       </p>
       <ZoomInImage
         src={problemas}
-        alt="Orientado a objets"
+        alt="Problemas con el sistema actual"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
-      </p>
-      <ZoomInImage
-        src={problemas}
-        alt="Orientado a objets"
-        width="auto"
-        className="diagrama"
-      />
-      <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024)
+        Se observa en detalle los problemas relacionados con la información del
+        sistema actual.
       </p>
       <ZoomInImage
         src={problemasinfo}
-        alt="Orientado a objets"
+        alt="Problemas de información"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Este gráfico muestra los problemas relacionados con la falta de
+        actualización de inventario y stock de productos.
       </p>
       <ZoomInImage
         src={stock}
-        alt="Orientado a objets"
+        alt="Problemas de stock"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Aquí se destaca cómo afecta la falta de productos online a la
+        experiencia de compra de los clientes.
       </p>
       <ZoomInImage
         src={productosOnline}
-        alt="Orientado a objets"
+        alt="Problemas con productos online"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        La siguiente gráfica refleja los problemas de disponibilidad de
+        productos en las sucursales.
       </p>
       <ZoomInImage
         src={dispo}
-        alt="Orientado a objets"
+        alt="Disponibilidad de productos"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Este gráfico muestra la frecuencia con la que los clientes visitan la
+        página web del supermercado.
       </p>
       <ZoomInImage
         src={visita}
-        alt="Orientado a objets"
+        alt="Visita a la página web"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Se evalúa la claridad de la página web de Hipermaxi y su facilidad de
+        uso según los clientes.
       </p>
       <ZoomInImage
         src={paginaClara}
-        alt="Orientado a objets"
+        alt="Claridad de la página web"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        La gráfica refleja el nivel de satisfacción de los clientes respecto al
+        sistema actual.
       </p>
       <ZoomInImage
         src={satisfecho}
-        alt="Orientado a objets"
+        alt="Satisfacción del cliente"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Este gráfico presenta sugerencias de mejora propuestas por los clientes
+        para optimizar el sistema actual.
       </p>
       <ZoomInImage
         src={mejorar}
-        alt="Orientado a objets"
+        alt="Sugerencias de mejora"
         width="auto"
         className="diagrama"
       />
+
       <p>
-        Gráfica de encuesta a clientes(Problemas con el sistema actual de
-        Hipermaxi). (elaborado por el grupo de investigación, 2024).
+        Finalmente, la gráfica analiza el funcionamiento global del sistema
+        actual de Hipermaxi.
       </p>
       <ZoomInImage
         src={sisact}
-        alt="Orientado a objets"
+        alt="Sistema actual"
         width="auto"
         className="diagrama"
       />
+
       <PageNavigation
         leftPage={{
           name: "Vision",

@@ -12,7 +12,7 @@ export const Foda = () => {
             <li>Analisis Foda</li>
           </ul>
         </BreadcrumbNav>
-        <h3 id="foda">1.4 Análisis FODA</h3>
+        <h3 id="foda">1.6 Análisis FODA</h3>
         <p>
           El análisis FODA muestra las fortalezas de Hipermaxi como su variedad
           de productos y su personal capacitado, mientras que las amenazas

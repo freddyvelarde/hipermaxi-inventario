@@ -10,7 +10,7 @@ export const AnalisisEstructuradoTeorico = () => {
           <li>Análisis y Diseño Estructurado</li>
         </ul>
       </BreadcrumbNav>
-      <h3 id="intro">1.1 Análisis y Diseño Estructurado</h3>
+      <h3 id="intro">1.3 Análisis y Diseño Estructurado</h3>
       <p>
         Esta sección se enfoca en el análisis detallado de los procesos actuales
         de gestión de inventario. Se utilizan diagramas y modelos para
