@@ -113,6 +113,7 @@ export const links = [
     data: [
       { name: "Casos de uso de negocio", link: "negocio" },
       { name: "Casos de uso de sistemas", link: "sistemas" },
+      { name: "Casos de uso de texto", link: "texto" },
       // { name: "Alcance", link: "#alcance" },
       // { name: "Mision", link: "#mision" },
       // { name: "Vision", link: "#vision" },

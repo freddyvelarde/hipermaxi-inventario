@@ -27,8 +27,8 @@ export const CasosUsoSistemas = () => {
           path: "/casos-uso/negocio",
         }}
         rightPage={{
-          name: "Marco teorico",
-          path: "/marco-teorico/intro",
+          name: "Casos de uso de texto",
+          path: "/casos-uso/texto",
         }}
       />
     </MarcoTeoricoPageStyled>

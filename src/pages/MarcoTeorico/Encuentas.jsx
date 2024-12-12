@@ -214,7 +214,10 @@ export const Encuestas = () => {
           name: "Vision",
           path: "/marco-teorico/vision",
         }}
-        rightPage={null}
+        rightPage={{
+          name: "Video",
+          path: "/video",
+        }}
       />
     </MarcoTeoricoPageStyled>
   );
