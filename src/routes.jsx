@@ -28,6 +28,7 @@ import { CasosUsoSistemas } from "./pages/CasosDeUso/CasosDeUsoDeSistemas";
 import { CasosUso } from "./pages/CasosDeUso/CasosDeUso";
 import { CasosUsoNegocio } from "./pages/CasosDeUso/CasosUsosNegocio";
 import { Encuestas } from "./pages/MarcoTeorico/Encuentas";
+import Video from "./pages/Video/Video";
 
 const useRouter = () => {
   const { dashboardLayoutActive } = useMiniDashboardActive();
@@ -92,7 +93,7 @@ const useRouter = () => {
           path: "/video",
           element: (
             <PageStyled state={dashboardLayoutActive}>
-              <h1>Video page</h1>
+              <Video />
             </PageStyled>
           ),
         },
